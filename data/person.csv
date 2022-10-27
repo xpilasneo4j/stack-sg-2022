@@ -1,0 +1,1001 @@
+id,education_level,job,salary,car_ownership,age,residential_district
+1,Secondary,Chief Strategy Officer,5926,True,29,Queenstown
+2,Vocational,Theatre director,15430,False,28,Alexandra Road
+3,Secondary,"Editor, film/video",9658,False,53,Tiong Bahru
+4,PhD,Dietitian,17417,True,26,Ang Mo Kio
+5,Diploma,Analytical chemist,19380,True,30,Tanjong Pagar
+6,Diploma,Advertising copywriter,17842,True,23,Boon Lay
+7,Primary,Jewellery designer,9314,False,65,Simei
+8,PhD,"Editor, commissioning",16713,False,43,Thomson
+9,Vocational,Financial trader,15725,False,40,Shenton Way
+10,PhD,Medical technical officer,12657,True,30,Simei
+11,Vocational,Economist,4401,False,47,Jurong
+12,Master Degree,"Editor, film/video",6392,False,65,Simei
+13,Diploma,Regulatory affairs officer,11712,True,39,Bugis
+14,Bachelor Degree,Furniture conservator/restorer,9596,False,33,Boon Lay
+15,Diploma,"Engineer, petroleum",15931,False,58,Changi
+16,PhD,Toxicologist,12565,False,59,Tanjong Pagar
+17,Vocational,Comptroller,12347,False,24,Queenstown
+18,Diploma,"Production designer, theatre/television/film",19577,False,54,Thomson
+19,Master Degree,Furniture designer,15953,False,51,Simei
+20,Primary,Broadcast presenter,6919,False,41,Loyang
+21,Master Degree,Primary school teacher,17685,False,52,Queenstown
+22,Bachelor Degree,Public relations officer,5003,False,29,Punggol
+23,Vocational,Chartered management accountant,9449,False,29,Bugis
+24,Master Degree,Diagnostic radiographer,8141,False,56,Rochor
+25,Vocational,Occupational therapist,6112,True,63,Punggol
+26,Diploma,Musician,17112,False,40,Tanjong Pagar
+27,Secondary,"Surveyor, commercial/residential",5156,False,52,Simei
+28,Bachelor Degree,Amenity horticulturist,5584,False,28,Thomson
+29,Diploma,Actor,19568,False,27,Ang Mo Kio
+30,Diploma,Advertising art director,14431,False,39,Beach Road
+31,Vocational,Immunologist,17359,False,54,Ang Mo Kio
+32,PhD,"Teacher, early years/pre",8109,False,46,Changi
+33,Master Degree,"Scientist, product/process development",7711,False,60,Pasir Ris
+34,Diploma,Logistics and distribution manager,14214,True,55,Tiong Bahru
+35,Diploma,Computer games developer,15853,False,32,Tiong Bahru
+36,Diploma,Quality manager,7420,False,26,Boon Lay
+37,Vocational,Curator,9746,False,34,Changi
+38,Vocational,Public relations account executive,7080,False,41,Punggol
+39,Bachelor Degree,"Engineer, control and instrumentation",12536,False,56,Tampines
+40,Vocational,Multimedia programmer,12998,False,35,Pasir Ris
+41,Bachelor Degree,Careers information officer,17819,False,40,Beach Road
+42,Vocational,Chief Executive Officer,6866,False,27,Boon Lay
+43,Bachelor Degree,"Designer, blown glass/stained glass",14131,False,45,Changi
+44,Diploma,Physiological scientist,7766,False,46,Queenstown
+45,PhD,Management consultant,10492,True,21,Chinatown
+46,Master Degree,Barista,5568,False,31,Bishan
+47,Vocational,"Administrator, local government",11409,False,49,Tiong Bahru
+48,PhD,Audiological scientist,18565,False,45,Loyang
+49,PhD,Actuary,11857,True,61,Changi
+50,Diploma,Medical physicist,9861,False,21,Bugis
+51,PhD,"Lecturer, higher education",16174,False,26,Yishun
+52,Bachelor Degree,Media buyer,5494,False,54,Bishan
+53,Diploma,Ranger/warden,13215,False,35,Rochor
+54,Master Degree,Air cabin crew,6724,False,46,Raffles Place
+55,Bachelor Degree,Broadcast journalist,5593,False,33,Hougang
+56,Diploma,Ecologist,6756,False,44,Thomson
+57,Vocational,Government social research officer,19826,False,31,Punggol
+58,Secondary,Sports coach,4138,True,52,Alexandra Road
+59,PhD,Theme park manager,18493,False,63,Tiong Bahru
+60,PhD,Dramatherapist,7550,False,26,Changi
+61,Master Degree,Information officer,8741,False,40,Pasir Ris
+62,Master Degree,Structural engineer,12700,False,55,Tanjong Pagar
+63,Bachelor Degree,Commissioning editor,9564,True,40,Shenton Way
+64,Vocational,"Designer, ceramics/pottery",5133,False,40,Queenstown
+65,Vocational,Chief Financial Officer,12568,True,32,Yishun
+66,Vocational,"Surveyor, mining",6305,False,41,Beach Road
+67,Vocational,Commercial horticulturist,8814,False,55,Rochor
+68,PhD,"Teacher, special educational needs",14563,False,22,Queenstown
+69,Diploma,"Horticulturist, commercial",14687,True,38,Hougang
+70,Vocational,Volunteer coordinator,9413,False,31,Pasir Ris
+71,Bachelor Degree,Database administrator,12084,False,26,Queenstown
+72,Bachelor Degree,Oceanographer,13595,False,61,Beach Road
+73,Primary,Insurance claims handler,4438,True,37,Queenstown
+74,Bachelor Degree,"Engineer, building services",5491,False,20,Jurong
+75,Diploma,"Teacher, English as a foreign language",7564,False,25,Tiong Bahru
+76,Bachelor Degree,Risk analyst,6876,False,28,Chinatown
+77,Bachelor Degree,Freight forwarder,7070,False,62,Shenton Way
+78,Primary,"Research officer, government",7327,False,54,Chinatown
+79,Diploma,Higher education careers adviser,9938,False,54,Changi
+80,Diploma,Teaching laboratory technician,6279,False,64,Jurong
+81,Diploma,Public relations officer,7931,False,37,Raffles Place
+82,Secondary,"Editor, film/video",7324,False,24,Raffles Place
+83,PhD,Leisure centre manager,9001,False,35,Punggol
+84,Master Degree,Contracting civil engineer,16259,False,31,Changi
+85,PhD,Location manager,15935,False,65,Bukit Timah
+86,PhD,Radio producer,13706,False,49,Sengkang
+87,PhD,Futures trader,16281,False,58,Simei
+88,PhD,Outdoor activities/education manager,12365,False,60,Alexandra Road
+89,Master Degree,"Scientist, product/process development",18285,False,58,Sengkang
+90,Diploma,"Engineer, biomedical",10728,False,20,Hougang
+91,Vocational,Herbalist,16131,False,65,Loyang
+92,Vocational,Industrial buyer,7434,False,28,Raffles Place
+93,Vocational,"Engineer, petroleum",17265,True,56,Bugis
+94,Vocational,Research scientist (maths),4257,True,36,Tampines
+95,Vocational,Research scientist (life sciences),8157,False,65,Queenstown
+96,PhD,Chartered legal executive (England and Wales),6866,True,55,Shenton Way
+97,Master Degree,"Sound technician, broadcasting/film/video",5111,False,27,Bishan
+98,Secondary,Information systems manager,4229,False,53,Shenton Way
+99,Vocational,"Horticulturist, commercial",17347,False,28,Chinatown
+100,Diploma,"Radiographer, diagnostic",15248,False,27,Boon Lay
+101,Secondary,Mechanical engineer,8429,False,24,Tanjong Pagar
+102,Vocational,Civil Service administrator,12403,False,24,Pasir Ris
+103,PhD,Neurosurgeon,8980,False,62,Jurong
+104,Primary,Trade union research officer,7733,True,38,Tanjong Pagar
+105,Secondary,Pension scheme manager,8578,False,33,Yishun
+106,PhD,Production engineer,11295,False,54,Tampines
+107,PhD,"Scientist, research (life sciences)",18638,True,46,Ang Mo Kio
+108,Bachelor Degree,Television/film/video producer,12724,False,32,Changi
+109,Diploma,"Runner, broadcasting/film/video",16251,False,46,Changi
+110,Bachelor Degree,Minerals surveyor,6357,False,29,Hougang
+111,PhD,Academic librarian,18793,True,57,Simei
+112,Master Degree,"Designer, blown glass/stained glass",10720,False,62,Beach Road
+113,Master Degree,Brewing technologist,14269,False,56,Beach Road
+114,Primary,Lexicographer,6045,False,20,Punggol
+115,Diploma,Dentist,14257,False,24,Changi
+116,PhD,"Sound technician, broadcasting/film/video",17189,False,43,Yishun
+117,PhD,Economist,12672,False,21,Raffles Place
+118,Master Degree,Chartered legal executive (England and Wales),9543,True,33,Ang Mo Kio
+119,Secondary,Database administrator,9228,True,51,Alexandra Road
+120,PhD,Financial trader,16841,False,43,Bukit Timah
+121,PhD,Leisure centre manager,15482,True,57,Pasir Ris
+122,Master Degree,Meteorologist,12693,True,65,Bishan
+123,Vocational,"Scientist, research (medical)",18086,False,22,Tampines
+124,PhD,Fashion designer,6735,False,46,Boon Lay
+125,Diploma,"Nurse, mental health",13636,False,46,Tampines
+126,Diploma,Health and safety adviser,7933,False,46,Loyang
+127,Master Degree,Tour manager,9530,False,64,Rochor
+128,PhD,Translator,14170,True,41,Pasir Ris
+129,Master Degree,Social worker,5627,False,20,Pasir Ris
+130,Vocational,Barista,16493,False,36,Hougang
+131,PhD,Interior and spatial designer,15818,True,26,Raffles Place
+132,PhD,"Engineer, water",18130,False,34,Rochor
+133,Master Degree,"Psychotherapist, dance movement",7808,False,21,Changi
+134,Vocational,Geophysical data processor,8375,False,65,Thomson
+135,PhD,Chartered legal executive (England and Wales),18717,False,43,Punggol
+136,Diploma,Textile designer,19971,False,20,Raffles Place
+137,PhD,Dance movement psychotherapist,15669,False,48,Loyang
+138,PhD,"Engineer, electronics",12578,False,58,Punggol
+139,Master Degree,Physiological scientist,17901,False,50,Bukit Timah
+140,Diploma,Garment/textile technologist,9431,False,63,Hougang
+141,Vocational,"Designer, television/film set",15253,True,36,Jurong
+142,Master Degree,Psychiatric nurse,10745,True,48,Boon Lay
+143,Vocational,Arboriculturist,14218,False,63,Tiong Bahru
+144,Master Degree,Applications developer,6613,True,64,Ang Mo Kio
+145,Vocational,Theme park manager,5311,False,37,Beach Road
+146,Bachelor Degree,Podiatrist,12418,False,36,Tanjong Pagar
+147,Bachelor Degree,"Geologist, engineering",15331,True,45,Shenton Way
+148,Bachelor Degree,"Scientist, research (medical)",9596,True,55,Bishan
+149,Master Degree,Financial adviser,5825,True,29,Bukit Timah
+150,Bachelor Degree,"Psychologist, sport and exercise",10962,True,59,Rochor
+151,PhD,"Scientist, marine",7707,True,32,Loyang
+152,Master Degree,Media buyer,15938,False,45,Punggol
+153,Diploma,"Surveyor, insurance",19893,False,21,Tanjong Pagar
+154,Vocational,Retail buyer,4961,False,54,Jurong
+155,Bachelor Degree,Retail banker,17125,True,49,Tiong Bahru
+156,Diploma,Data processing manager,10666,True,43,Beach Road
+157,Bachelor Degree,Politician's assistant,9911,False,53,Changi
+158,Bachelor Degree,"Programmer, applications",9284,True,37,Jurong
+159,Master Degree,Ecologist,16683,False,27,Thomson
+160,Secondary,Equities trader,8145,True,41,Ang Mo Kio
+161,PhD,Senior tax professional/tax inspector,14491,False,48,Pasir Ris
+162,Bachelor Degree,Arts administrator,18971,True,61,Bukit Timah
+163,PhD,Illustrator,17330,False,37,Simei
+164,Bachelor Degree,Ranger/warden,17519,False,26,Tiong Bahru
+165,Bachelor Degree,Warden/ranger,14950,False,64,Beach Road
+166,Diploma,"Surveyor, land/geomatics",12213,False,26,Bugis
+167,Diploma,Higher education lecturer,11074,True,62,Sengkang
+168,Diploma,Horticultural therapist,5395,True,38,Rochor
+169,Vocational,Microbiologist,13511,True,61,Ang Mo Kio
+170,Bachelor Degree,Personnel officer,15854,False,51,Pasir Ris
+171,Diploma,Public affairs consultant,14597,False,53,Ang Mo Kio
+172,Master Degree,Barrister's clerk,9750,True,45,Chinatown
+173,Bachelor Degree,Electrical engineer,5993,False,40,Changi
+174,Vocational,Clinical embryologist,17544,True,51,Bishan
+175,Diploma,Data processing manager,15560,True,59,Alexandra Road
+176,Vocational,Medical laboratory scientific officer,15147,True,45,Loyang
+177,Vocational,Oncologist,6525,False,41,Jurong
+178,Bachelor Degree,"Teacher, secondary school",14148,True,48,Queenstown
+179,Diploma,Architect,9813,False,26,Alexandra Road
+180,Master Degree,Management consultant,18887,False,58,Beach Road
+181,Vocational,Financial planner,8423,False,54,Sengkang
+182,Diploma,Cabin crew,14537,False,59,Bugis
+183,Bachelor Degree,Transport planner,18274,False,33,Rochor
+184,Vocational,Clothing/textile technologist,5255,False,51,Raffles Place
+185,Master Degree,"Engineer, materials",16103,False,38,Rochor
+186,Bachelor Degree,Farm manager,12726,False,43,Punggol
+187,Vocational,"Engineer, aeronautical",8789,False,39,Queenstown
+188,Bachelor Degree,Research scientist (life sciences),9950,True,35,Queenstown
+189,Vocational,"Engineer, chemical",9608,False,31,Shenton Way
+190,Vocational,Set designer,4952,False,35,Tanjong Pagar
+191,Diploma,Podiatrist,7639,False,30,Queenstown
+192,Master Degree,Furniture designer,5265,False,46,Raffles Place
+193,Bachelor Degree,"Therapist, sports",16549,False,36,Shenton Way
+194,PhD,Probation officer,15787,True,22,Pasir Ris
+195,Diploma,Occupational therapist,14073,False,55,Simei
+196,PhD,Public house manager,10930,False,47,Bugis
+197,Master Degree,IT consultant,7959,False,52,Bishan
+198,Vocational,Occupational hygienist,16765,False,27,Jurong
+199,Diploma,Tax inspector,5473,False,49,Punggol
+200,Diploma,Copy,16856,False,64,Rochor
+201,Vocational,Location manager,9388,False,34,Thomson
+202,Vocational,Furniture conservator/restorer,15471,False,30,Alexandra Road
+203,Vocational,"Doctor, general practice",9548,False,43,Punggol
+204,Vocational,"Engineer, land",18829,False,28,Queenstown
+205,Diploma,Chief Financial Officer,18117,False,60,Alexandra Road
+206,Master Degree,"Production assistant, television",10670,False,25,Beach Road
+207,Master Degree,"Engineer, communications",11046,False,20,Bukit Timah
+208,Vocational,"Psychologist, counselling",8778,False,51,Simei
+209,Vocational,"Librarian, academic",17904,False,41,Punggol
+210,PhD,Midwife,19929,True,27,Chinatown
+211,Master Degree,Hydrographic surveyor,15379,False,33,Ang Mo Kio
+212,Diploma,Set designer,16875,False,61,Beach Road
+213,Vocational,"Scientist, product/process development",9099,True,39,Beach Road
+214,Diploma,Contracting civil engineer,18140,True,23,Bishan
+215,Vocational,"Editor, magazine features",12973,False,64,Alexandra Road
+216,Master Degree,Analytical chemist,18663,False,41,Changi
+217,PhD,Financial adviser,8330,True,39,Bishan
+218,Bachelor Degree,Firefighter,11084,False,21,Ang Mo Kio
+219,Bachelor Degree,"Designer, graphic",11157,False,38,Thomson
+220,PhD,Ophthalmologist,9814,False,46,Raffles Place
+221,Bachelor Degree,Immunologist,17573,True,48,Shenton Way
+222,Diploma,Office manager,9024,True,31,Tampines
+223,Diploma,Land,6622,False,37,Tiong Bahru
+224,Bachelor Degree,Insurance underwriter,9344,True,57,Pasir Ris
+225,Bachelor Degree,"Surveyor, insurance",19238,False,29,Tanjong Pagar
+226,PhD,Radio producer,11591,False,22,Hougang
+227,Vocational,Air cabin crew,9245,False,65,Ang Mo Kio
+228,Bachelor Degree,Facilities manager,16518,False,24,Loyang
+229,Vocational,Telecommunications researcher,7837,False,42,Changi
+230,Diploma,"Programme researcher, broadcasting/film/video",8499,False,51,Pasir Ris
+231,Vocational,IT technical support officer,13183,False,48,Pasir Ris
+232,PhD,"Horticulturist, commercial",6000,False,53,Thomson
+233,Bachelor Degree,"Scientist, audiological",16272,False,45,Bukit Timah
+234,Diploma,Quarry manager,13437,False,50,Yishun
+235,Diploma,"Therapist, horticultural",13257,False,23,Punggol
+236,Vocational,Geophysical data processor,15042,True,53,Tanjong Pagar
+237,Vocational,Archivist,14821,False,40,Simei
+238,PhD,"Engineer, biomedical",15359,True,23,Loyang
+239,Diploma,Tax adviser,6214,True,27,Sengkang
+240,Vocational,Planning and development surveyor,5158,True,34,Simei
+241,Diploma,Health visitor,14488,True,63,Alexandra Road
+242,Bachelor Degree,Best boy,13231,False,41,Pasir Ris
+243,PhD,"Administrator, local government",11981,False,62,Changi
+244,PhD,Theatre stage manager,18711,False,61,Simei
+245,Vocational,Ecologist,5362,False,54,Bugis
+246,Bachelor Degree,Pharmacologist,7818,False,35,Queenstown
+247,Master Degree,Financial manager,18453,False,60,Boon Lay
+248,Bachelor Degree,Manufacturing systems engineer,9163,False,37,Changi
+249,Master Degree,"Scientist, research (medical)",14321,False,48,Chinatown
+250,Vocational,Private music teacher,17570,False,57,Raffles Place
+251,PhD,Research scientist (life sciences),19722,False,26,Beach Road
+252,Vocational,Passenger transport manager,14205,True,28,Alexandra Road
+253,PhD,Materials engineer,8464,False,35,Loyang
+254,PhD,"Engineer, manufacturing",17035,False,54,Bugis
+255,Diploma,Administrator,9025,True,58,Beach Road
+256,Bachelor Degree,Senior tax professional/tax inspector,9478,False,27,Tiong Bahru
+257,Bachelor Degree,Diagnostic radiographer,13341,True,44,Tampines
+258,Bachelor Degree,English as a second language teacher,14510,False,26,Loyang
+259,PhD,"Social research officer, government",16287,False,41,Bugis
+260,PhD,Pensions consultant,18451,False,60,Raffles Place
+261,Secondary,Chief Executive Officer,8954,False,28,Simei
+262,Diploma,Early years teacher,13159,True,21,Tampines
+263,PhD,Agricultural engineer,6926,False,29,Raffles Place
+264,Bachelor Degree,"Social research officer, government",19024,False,30,Ang Mo Kio
+265,Vocational,Professor Emeritus,4444,False,30,Loyang
+266,Vocational,Sales promotion account executive,7821,False,54,Yishun
+267,Master Degree,"Therapist, occupational",11225,False,50,Beach Road
+268,Vocational,Field trials officer,10403,False,28,Bishan
+269,Master Degree,Advertising account planner,16022,False,35,Simei
+270,Bachelor Degree,Drilling engineer,6091,True,33,Thomson
+271,Vocational,Communications engineer,13340,True,61,Tampines
+272,Diploma,"Production assistant, radio",16113,True,27,Boon Lay
+273,Master Degree,Child psychotherapist,19104,False,56,Bukit Timah
+274,PhD,"Embryologist, clinical",16979,False,25,Simei
+275,Vocational,Management consultant,5516,False,30,Thomson
+276,PhD,Higher education careers adviser,10430,False,24,Bukit Timah
+277,Diploma,Exercise physiologist,11896,False,65,Tiong Bahru
+278,Bachelor Degree,Research scientist (medical),15940,False,59,Tanjong Pagar
+279,Bachelor Degree,Animator,15684,True,35,Pasir Ris
+280,Vocational,Cartographer,11026,False,53,Thomson
+281,Master Degree,"Engineer, electrical",14164,False,65,Changi
+282,Diploma,Further education lecturer,18200,False,57,Raffles Place
+283,Diploma,Sports therapist,13369,False,32,Hougang
+284,PhD,Proofreader,10459,True,47,Boon Lay
+285,Vocational,Translator,5362,False,52,Bishan
+286,Bachelor Degree,Merchant navy officer,8234,False,63,Sengkang
+287,Vocational,Building services engineer,7171,True,43,Raffles Place
+288,Diploma,Fast food restaurant manager,15548,False,59,Tiong Bahru
+289,PhD,Commercial art gallery manager,14417,True,65,Alexandra Road
+290,Bachelor Degree,"Programmer, applications",8095,False,55,Rochor
+291,PhD,Food technologist,15592,False,32,Beach Road
+292,Vocational,Public relations account executive,6151,True,40,Tampines
+293,PhD,Agricultural engineer,11910,False,61,Beach Road
+294,Master Degree,Equality and diversity officer,5142,False,36,Thomson
+295,Bachelor Degree,"Engineer, petroleum",8885,False,20,Thomson
+296,PhD,Financial manager,11076,False,23,Hougang
+297,Bachelor Degree,Hospital pharmacist,11490,False,22,Shenton Way
+298,Master Degree,Camera operator,19226,True,27,Changi
+299,Diploma,Physiological scientist,19619,True,23,Bugis
+300,Vocational,Professor Emeritus,17859,False,63,Tanjong Pagar
+301,Master Degree,Lobbyist,14813,False,27,Tanjong Pagar
+302,Vocational,Public affairs consultant,17449,False,62,Bugis
+303,PhD,Fine artist,25917,True,41,Chinatown
+304,Vocational,Corporate investment banker,19893,True,32,Ang Mo Kio
+305,Vocational,Microbiologist,8875,True,58,Ang Mo Kio
+306,Master Degree,Electrical engineer,19983,True,49,Alexandra Road
+307,Bachelor Degree,Computer games developer,8852,False,36,Queenstown
+308,Master Degree,Architect,8944,False,61,Chinatown
+309,Bachelor Degree,"Surveyor, hydrographic",7697,False,55,Bukit Timah
+310,Master Degree,IT sales professional,12359,True,35,Yishun
+311,Bachelor Degree,"Programmer, applications",15493,False,59,Bishan
+312,Bachelor Degree,Clinical embryologist,15915,True,40,Bukit Timah
+313,Bachelor Degree,"Chemist, analytical",15669,False,26,Pasir Ris
+314,Vocational,Management consultant,15894,True,28,Yishun
+315,Master Degree,"Engineer, petroleum",11127,False,41,Boon Lay
+316,Diploma,Best boy,10126,False,32,Pasir Ris
+317,Diploma,Theatre stage manager,16049,False,60,Tampines
+318,Diploma,Advertising art director,10777,False,47,Boon Lay
+319,Bachelor Degree,Market researcher,14568,False,21,Tanjong Pagar
+320,Vocational,"Lighting technician, broadcasting/film/video",13787,False,23,Changi
+321,PhD,Ceramics designer,8191,False,49,Punggol
+322,Diploma,Production manager,13458,False,55,Tampines
+323,PhD,Insurance risk surveyor,18140,True,55,Sengkang
+324,Diploma,"Engineer, chemical",8241,False,33,Simei
+325,Vocational,Pharmacologist,13029,False,34,Simei
+326,Bachelor Degree,Film/video editor,18644,False,24,Beach Road
+327,Primary,"Designer, fashion/clothing",5702,False,29,Pasir Ris
+328,Bachelor Degree,"Runner, broadcasting/film/video",14765,False,22,Beach Road
+329,Diploma,Analytical chemist,6296,False,31,Rochor
+330,Vocational,Gaffer,7813,False,44,Shenton Way
+331,Diploma,Naval architect,19438,False,42,Bukit Timah
+332,Master Degree,Recruitment consultant,19513,False,46,Chinatown
+333,PhD,Interior and spatial designer,16332,True,38,Punggol
+334,Vocational,"Editor, magazine features",18405,False,46,Tiong Bahru
+335,Master Degree,Ceramics designer,6148,False,33,Bugis
+336,Bachelor Degree,"Scientist, research (medical)",17066,False,56,Hougang
+337,Bachelor Degree,"Engineer, technical sales",8761,False,32,Beach Road
+338,Diploma,Aeronautical engineer,6461,False,41,Changi
+339,Vocational,IT technical support officer,16378,False,55,Simei
+340,Diploma,Furniture conservator/restorer,9990,False,65,Chinatown
+341,PhD,Health and safety inspector,7319,False,32,Tanjong Pagar
+342,Master Degree,Building control surveyor,5030,False,60,Shenton Way
+343,Vocational,"Radiographer, therapeutic",12532,False,64,Raffles Place
+344,Vocational,"Journalist, newspaper",11449,True,25,Boon Lay
+345,PhD,Computer games developer,6014,False,64,Rochor
+346,PhD,Higher education careers adviser,11014,False,45,Ang Mo Kio
+347,Bachelor Degree,Fashion designer,6832,True,39,Thomson
+348,Vocational,Retail manager,11790,True,35,Ang Mo Kio
+349,Vocational,Medical technical officer,15970,True,62,Simei
+350,Diploma,Museum/gallery exhibitions officer,12242,False,64,Bishan
+351,Vocational,Company secretary,12921,False,32,Tampines
+352,Vocational,Technical author,10269,False,57,Loyang
+353,Secondary,Chief Executive Officer,6767,True,43,Hougang
+354,Bachelor Degree,Psychiatrist,15907,True,55,Tampines
+355,Master Degree,Government social research officer,17831,False,46,Tanjong Pagar
+356,Vocational,"Education officer, museum",4955,False,51,Boon Lay
+357,Secondary,"Scientist, marine",9585,False,25,Tanjong Pagar
+358,Diploma,"Education officer, community",11757,True,50,Tiong Bahru
+359,Diploma,Software engineer,12800,True,61,Changi
+360,Primary,Recruitment consultant,6670,True,42,Raffles Place
+361,Bachelor Degree,Intelligence analyst,18564,True,40,Jurong
+362,PhD,Pensions consultant,14660,False,29,Tanjong Pagar
+363,Master Degree,Chief Executive Officer,6982,False,53,Sengkang
+364,Master Degree,Industrial/product designer,9551,False,54,Sengkang
+365,Vocational,Fitness centre manager,14450,False,64,Yishun
+366,Vocational,"Lighting technician, broadcasting/film/video",16255,False,50,Punggol
+367,Bachelor Degree,Community education officer,16399,False,42,Bugis
+368,Diploma,Radio broadcast assistant,17567,False,57,Queenstown
+369,Secondary,Agricultural engineer,8281,False,33,Hougang
+370,PhD,Chiropractor,6082,False,47,Bukit Timah
+371,Bachelor Degree,Chief Marketing Officer,16821,True,38,Alexandra Road
+372,Vocational,Civil Service fast streamer,15280,False,37,Chinatown
+373,Bachelor Degree,Chartered public finance accountant,11193,False,63,Jurong
+374,Vocational,Ergonomist,18783,False,62,Bishan
+375,Master Degree,Dance movement psychotherapist,10943,False,34,Alexandra Road
+376,Vocational,Writer,6350,False,38,Queenstown
+377,Diploma,Personnel officer,11048,True,39,Simei
+378,Bachelor Degree,"Engineer, technical sales",8521,False,23,Jurong
+379,Master Degree,Waste management officer,8880,False,21,Jurong
+380,PhD,"Engineer, structural",18924,True,32,Beach Road
+381,Vocational,Meteorologist,9113,False,38,Loyang
+382,PhD,"Engineer, communications",22679,True,28,Bishan
+383,Master Degree,Dietitian,19824,False,30,Tampines
+384,Vocational,Theatre stage manager,18051,False,39,Punggol
+385,Vocational,Applications developer,18754,False,60,Hougang
+386,PhD,"Chemist, analytical",5210,False,28,Queenstown
+387,PhD,Freight forwarder,10001,False,25,Bishan
+388,PhD,Chartered public finance accountant,17011,False,32,Beach Road
+389,Diploma,Firefighter,5460,False,50,Beach Road
+390,PhD,Gaffer,17183,False,53,Punggol
+391,Bachelor Degree,Psychotherapist,6627,True,27,Beach Road
+392,PhD,Aeronautical engineer,11476,False,41,Shenton Way
+393,Master Degree,Dispensing optician,6543,False,29,Pasir Ris
+394,Diploma,"Lecturer, further education",6642,False,29,Chinatown
+395,Bachelor Degree,Dancer,16663,False,57,Ang Mo Kio
+396,Secondary,Purchasing manager,9181,True,48,Rochor
+397,PhD,Petroleum engineer,9811,False,56,Loyang
+398,PhD,Water engineer,15135,True,28,Shenton Way
+399,Primary,Estate agent,6632,False,59,Hougang
+400,Master Degree,Phytotherapist,10089,False,53,Ang Mo Kio
+401,Diploma,Armed forces training and education officer,10281,False,31,Pasir Ris
+402,PhD,Learning disability nurse,6145,True,28,Tampines
+403,PhD,Optometrist,29049,False,39,Punggol
+404,Diploma,Psychotherapist,15910,False,31,Tampines
+405,Vocational,Charity officer,15290,True,53,Boon Lay
+406,Vocational,Trading standards officer,8933,False,54,Jurong
+407,Master Degree,Ranger/warden,10651,False,45,Rochor
+408,Master Degree,"Surveyor, insurance",16647,False,20,Simei
+409,Diploma,Biomedical scientist,5952,False,40,Beach Road
+410,Vocational,Tour manager,14396,False,62,Boon Lay
+411,Master Degree,Public relations officer,6670,False,45,Chinatown
+412,Diploma,Land/geomatics surveyor,12482,False,28,Tiong Bahru
+413,Diploma,Veterinary surgeon,11282,False,24,Shenton Way
+414,Bachelor Degree,Therapeutic radiographer,15232,False,38,Raffles Place
+415,Diploma,Environmental education officer,9038,True,48,Alexandra Road
+416,Diploma,Control and instrumentation engineer,12360,False,24,Thomson
+417,Vocational,Mechanical engineer,9801,False,35,Boon Lay
+418,Bachelor Degree,Counselling psychologist,8890,False,41,Tiong Bahru
+419,Vocational,Personnel officer,5506,True,38,Beach Road
+420,Diploma,Clinical biochemist,15751,False,57,Boon Lay
+421,Vocational,Pension scheme manager,5744,True,28,Jurong
+422,Bachelor Degree,Tourism officer,13525,False,52,Raffles Place
+423,PhD,"Engineer, broadcasting (operations)",12007,False,39,Pasir Ris
+424,Secondary,Proofreader,6060,False,58,Jurong
+425,Diploma,Financial manager,12482,False,39,Loyang
+426,Diploma,Sports therapist,18723,False,52,Loyang
+427,Bachelor Degree,"Development worker, community",17704,False,23,Jurong
+428,Diploma,Soil scientist,14966,False,33,Chinatown
+429,PhD,Advertising copywriter,17793,True,61,Bugis
+430,Bachelor Degree,Barista,13689,True,25,Loyang
+431,PhD,"Engineer, control and instrumentation",14760,False,20,Changi
+432,Master Degree,"Engineer, civil (consulting)",12744,False,34,Bugis
+433,Bachelor Degree,"Psychotherapist, child",8374,False,54,Hougang
+434,Diploma,"Administrator, local government",12590,True,49,Bishan
+435,Bachelor Degree,Education administrator,8961,False,25,Chinatown
+436,Bachelor Degree,Hydrologist,11840,False,27,Tampines
+437,Master Degree,Health service manager,18816,False,45,Queenstown
+438,Bachelor Degree,Mining engineer,18216,False,45,Bukit Timah
+439,Master Degree,Social researcher,10460,True,22,Jurong
+440,Bachelor Degree,"Biochemist, clinical",19808,False,34,Loyang
+441,Diploma,Manufacturing engineer,5154,False,51,Loyang
+442,Vocational,Location manager,5158,False,20,Punggol
+443,Master Degree,TEFL teacher,19423,False,39,Ang Mo Kio
+444,Diploma,"Psychologist, occupational",17086,True,45,Bugis
+445,Vocational,Community pharmacist,12209,False,34,Pasir Ris
+446,Vocational,Horticultural therapist,8976,True,46,Changi
+447,Vocational,Herbalist,14358,False,44,Ang Mo Kio
+448,Master Degree,"Engineer, manufacturing systems",19628,False,56,Beach Road
+449,Diploma,"Lecturer, further education",13082,True,44,Thomson
+450,Diploma,"Scientist, product/process development",9757,False,61,Boon Lay
+451,Diploma,Chartered loss adjuster,10495,False,24,Hougang
+452,Bachelor Degree,"Engineer, control and instrumentation",10355,True,52,Queenstown
+453,PhD,Investment analyst,17597,False,50,Bugis
+454,Master Degree,Materials engineer,14120,False,26,Loyang
+455,Bachelor Degree,Quarry manager,16008,False,53,Thomson
+456,Vocational,Operational researcher,11106,False,65,Beach Road
+457,PhD,Tax adviser,18671,False,42,Tiong Bahru
+458,PhD,Animal technologist,22949,False,20,Boon Lay
+459,PhD,"Secretary, company",12797,True,60,Thomson
+460,Diploma,Local government officer,8714,False,34,Tampines
+461,Secondary,Electronics engineer,7693,False,61,Queenstown
+462,Master Degree,Homeopath,17006,False,43,Jurong
+463,Vocational,Seismic interpreter,13706,True,57,Beach Road
+464,Diploma,Engineering geologist,10860,False,27,Tampines
+465,Diploma,"Teacher, secondary school",17429,False,32,Ang Mo Kio
+466,Bachelor Degree,Community education officer,6536,False,49,Boon Lay
+467,PhD,Brewing technologist,6883,False,28,Bukit Timah
+468,Bachelor Degree,Archaeologist,16117,False,37,Beach Road
+469,Diploma,"Scientist, physiological",11314,False,40,Changi
+470,PhD,Optometrist,8678,True,33,Bugis
+471,PhD,Counsellor,19859,False,27,Simei
+472,Vocational,Armed forces training and education officer,16910,False,55,Thomson
+473,Vocational,Ranger/warden,8990,False,31,Thomson
+474,Diploma,Radiation protection practitioner,10354,False,46,Boon Lay
+475,Vocational,Interior and spatial designer,10110,False,58,Thomson
+476,Vocational,Further education lecturer,13438,False,45,Hougang
+477,Master Degree,"Administrator, local government",14866,False,39,Boon Lay
+478,PhD,Electrical engineer,9407,False,31,Alexandra Road
+479,Diploma,Insurance claims handler,19173,False,46,Tanjong Pagar
+480,Bachelor Degree,Oceanographer,7538,False,58,Hougang
+481,Master Degree,Biomedical engineer,14710,False,26,Bukit Timah
+482,Master Degree,Telecommunications researcher,10141,True,57,Boon Lay
+483,Bachelor Degree,Mechanical engineer,14902,False,37,Ang Mo Kio
+484,Bachelor Degree,Publishing copy,17306,True,62,Bishan
+485,Vocational,Psychiatrist,18227,False,63,Punggol
+486,PhD,Magazine features editor,14368,True,35,Raffles Place
+487,Vocational,"Investment banker, operational",16393,False,35,Tanjong Pagar
+488,PhD,"Teacher, English as a foreign language",17485,True,43,Chinatown
+489,PhD,Occupational therapist,5835,False,27,Punggol
+490,Diploma,Midwife,13765,True,59,Bukit Timah
+491,Secondary,Applications developer,9158,False,64,Rochor
+492,Master Degree,"Scientist, audiological",5743,False,57,Raffles Place
+493,Bachelor Degree,Lexicographer,13671,False,24,Tampines
+494,Master Degree,"Administrator, Civil Service",15080,False,48,Jurong
+495,PhD,Control and instrumentation engineer,13518,False,25,Bugis
+496,Diploma,"Engineer, site",14792,False,64,Alexandra Road
+497,Bachelor Degree,"Engineer, agricultural",9745,True,42,Beach Road
+498,Primary,Musician,9198,False,64,Jurong
+499,Vocational,Medical laboratory scientific officer,10513,False,46,Jurong
+500,Diploma,Sub,16339,False,23,Raffles Place
+501,Vocational,Geographical information systems officer,13180,False,20,Boon Lay
+502,PhD,Higher education lecturer,14824,False,51,Shenton Way
+503,Diploma,Set designer,6362,False,62,Bukit Timah
+504,Bachelor Degree,Automotive engineer,17332,True,59,Queenstown
+505,Master Degree,Equality and diversity officer,13236,True,46,Rochor
+506,PhD,"Therapist, art",12855,False,41,Raffles Place
+507,Master Degree,"Psychologist, educational",8141,False,43,Raffles Place
+508,PhD,"Designer, television/film set",8270,False,24,Shenton Way
+509,Bachelor Degree,Location manager,13621,False,26,Hougang
+510,Master Degree,Operations geologist,7599,True,54,Bugis
+511,Primary,Insurance underwriter,8501,False,29,Punggol
+512,Vocational,Race relations officer,17899,False,55,Loyang
+513,Bachelor Degree,Cartographer,6569,False,57,Boon Lay
+514,Bachelor Degree,Financial trader,17516,False,55,Beach Road
+515,Vocational,General practice doctor,17223,False,62,Shenton Way
+516,Vocational,Geoscientist,4011,False,50,Bukit Timah
+517,Primary,Printmaker,8941,False,43,Bishan
+518,Vocational,"Psychologist, clinical",9292,True,33,Rochor
+519,Bachelor Degree,"Engineer, technical sales",5076,False,52,Thomson
+520,PhD,"Programmer, systems",10398,True,57,Chinatown
+521,Vocational,Automotive engineer,9776,True,40,Thomson
+522,Master Degree,"Engineer, civil (consulting)",14265,True,52,Thomson
+523,Diploma,Data scientist,13415,False,56,Bugis
+524,Bachelor Degree,Chartered management accountant,8159,False,34,Tanjong Pagar
+525,Vocational,Learning mentor,14738,False,49,Ang Mo Kio
+526,PhD,"Secretary, company",17377,False,63,Thomson
+527,Secondary,"Engineer, materials",8789,False,50,Bukit Timah
+528,PhD,"Surveyor, insurance",12866,False,62,Chinatown
+529,Vocational,Child psychotherapist,7550,False,51,Simei
+530,Diploma,"Engineer, materials",18829,False,24,Rochor
+531,PhD,Higher education lecturer,8264,False,23,Sengkang
+532,Master Degree,Actor,8505,False,57,Bukit Timah
+533,Diploma,"Nurse, mental health",12270,False,65,Bugis
+534,Master Degree,Operational investment banker,15229,False,54,Chinatown
+535,Master Degree,Planning and development surveyor,6516,False,60,Changi
+536,PhD,Structural engineer,11127,False,39,Thomson
+537,Bachelor Degree,Estate manager/land agent,9067,True,28,Tanjong Pagar
+538,Diploma,Garment/textile technologist,14384,True,47,Punggol
+539,Diploma,"Engineer, energy",14637,False,49,Queenstown
+540,Primary,Scientific laboratory technician,7977,False,30,Tiong Bahru
+541,PhD,Estate agent,16549,False,43,Changi
+542,Master Degree,Building surveyor,7530,False,64,Bishan
+543,Secondary,Intelligence analyst,9247,False,49,Loyang
+544,Diploma,Marketing executive,18116,False,32,Bukit Timah
+545,Master Degree,Lexicographer,14035,False,25,Beach Road
+546,Diploma,Industrial/product designer,13238,True,38,Bugis
+547,Master Degree,Advertising account planner,13485,False,53,Chinatown
+548,PhD,"Production designer, theatre/television/film",13203,False,42,Bugis
+549,Bachelor Degree,"Optician, dispensing",15893,False,62,Rochor
+550,PhD,Probation officer,8368,False,47,Bugis
+551,Vocational,Water quality scientist,5153,False,35,Jurong
+552,Vocational,Sports administrator,16435,False,22,Rochor
+553,Master Degree,Rural practice surveyor,7377,False,25,Bugis
+554,Secondary,Occupational hygienist,9408,False,40,Simei
+555,Diploma,Biomedical scientist,6284,False,41,Chinatown
+556,Vocational,Management consultant,11444,True,30,Bukit Timah
+557,Master Degree,"Biochemist, clinical",5753,False,42,Boon Lay
+558,Master Degree,Immigration officer,6407,False,57,Shenton Way
+559,Master Degree,Emergency planning/management officer,12804,False,23,Bukit Timah
+560,Bachelor Degree,Seismic interpreter,15891,False,31,Queenstown
+561,Vocational,Commercial art gallery manager,9626,False,29,Alexandra Road
+562,Master Degree,Haematologist,18623,False,24,Shenton Way
+563,Vocational,Science writer,4885,False,58,Simei
+564,Diploma,Public affairs consultant,10282,False,34,Pasir Ris
+565,Bachelor Degree,Research scientist (life sciences),8471,False,42,Tampines
+566,Diploma,"Copywriter, advertising",18567,True,58,Sengkang
+567,Diploma,"Optician, dispensing",9288,True,24,Bishan
+568,Secondary,Multimedia programmer,5497,True,42,Bishan
+569,Bachelor Degree,Applications developer,11489,False,52,Beach Road
+570,Bachelor Degree,"Psychologist, counselling",11541,False,33,Simei
+571,Bachelor Degree,"Loss adjuster, chartered",9946,True,22,Boon Lay
+572,PhD,Secondary school teacher,6850,False,31,Simei
+573,Vocational,"Nurse, adult",18790,False,28,Changi
+574,Vocational,"Runner, broadcasting/film/video",5423,False,21,Tanjong Pagar
+575,Diploma,Therapeutic radiographer,17084,False,44,Simei
+576,Secondary,"Development worker, international aid",9974,False,30,Tampines
+577,Bachelor Degree,"Loss adjuster, chartered",17963,True,56,Pasir Ris
+578,PhD,Building services engineer,17642,False,60,Jurong
+579,PhD,Insurance underwriter,17065,False,31,Simei
+580,PhD,Town planner,11202,False,56,Queenstown
+581,Secondary,"Copywriter, advertising",4539,False,31,Tiong Bahru
+582,Bachelor Degree,Claims inspector/assessor,14566,False,47,Sengkang
+583,Master Degree,Horticultural therapist,7885,True,41,Jurong
+584,Primary,"Administrator, charities/voluntary organisations",8890,True,51,Loyang
+585,Diploma,Oceanographer,15646,True,65,Raffles Place
+586,Master Degree,Claims inspector/assessor,16069,False,65,Changi
+587,Master Degree,Multimedia specialist,5589,False,22,Boon Lay
+588,PhD,Estate agent,13616,False,32,Tampines
+589,Master Degree,Advertising art director,15752,False,54,Pasir Ris
+590,Diploma,"Engineer, petroleum",15299,False,65,Loyang
+591,Diploma,Architectural technologist,16166,False,51,Alexandra Road
+592,Vocational,Product manager,9114,False,50,Shenton Way
+593,Vocational,Haematologist,14330,False,28,Bugis
+594,Vocational,International aid/development worker,10107,False,31,Raffles Place
+595,Bachelor Degree,"Pilot, airline",13522,False,39,Bukit Timah
+596,Bachelor Degree,Phytotherapist,5595,False,62,Bishan
+597,PhD,"Psychologist, counselling",8546,False,65,Jurong
+598,Primary,Market researcher,8971,False,44,Simei
+599,Vocational,Conference centre manager,6724,False,59,Raffles Place
+600,PhD,"Psychologist, educational",14804,False,35,Boon Lay
+601,Bachelor Degree,"Designer, television/film set",13540,False,54,Yishun
+602,Bachelor Degree,Theatre manager,17338,False,46,Chinatown
+603,PhD,"Psychologist, clinical",14938,False,21,Changi
+604,Vocational,Artist,6375,True,62,Tanjong Pagar
+605,Diploma,"Engineer, drilling",18238,False,51,Hougang
+606,PhD,Physiological scientist,19731,True,38,Tiong Bahru
+607,Bachelor Degree,Astronomer,5089,False,57,Raffles Place
+608,Diploma,Recycling officer,15846,True,53,Chinatown
+609,Secondary,"Teacher, primary school",6394,False,30,Bukit Timah
+610,Diploma,Environmental education officer,15728,False,26,Hougang
+611,Vocational,Web designer,12377,True,51,Hougang
+612,Secondary,"Programmer, multimedia",8039,False,64,Ang Mo Kio
+613,Diploma,"Scientist, water quality",13231,True,27,Tanjong Pagar
+614,PhD,"Civil engineer, contracting",15481,False,54,Queenstown
+615,Diploma,Pharmacologist,6595,True,62,Queenstown
+616,Bachelor Degree,International aid/development worker,19799,False,46,Queenstown
+617,Diploma,Medical laboratory scientific officer,15116,False,20,Sengkang
+618,Diploma,Lobbyist,14403,False,30,Tampines
+619,Master Degree,"Investment banker, corporate",5789,False,39,Ang Mo Kio
+620,PhD,Financial planner,16158,True,23,Yishun
+621,Bachelor Degree,Media planner,18901,False,40,Loyang
+622,Vocational,Broadcast journalist,17554,True,39,Ang Mo Kio
+623,Vocational,Counsellor,18874,False,27,Chinatown
+624,PhD,Secretary/administrator,12940,False,32,Rochor
+625,Master Degree,"Therapist, occupational",13447,False,59,Rochor
+626,Vocational,"Pharmacist, hospital",5689,True,46,Yishun
+627,Vocational,Social worker,18771,False,38,Chinatown
+628,PhD,"Engineer, electrical",11249,False,33,Raffles Place
+629,Bachelor Degree,"Research officer, government",7949,False,64,Rochor
+630,Bachelor Degree,Therapeutic radiographer,18286,True,40,Chinatown
+631,PhD,Psychiatric nurse,14785,True,23,Raffles Place
+632,Vocational,"Loss adjuster, chartered",17519,False,62,Rochor
+633,Diploma,Surgeon,5246,False,32,Bugis
+634,Vocational,Theatre manager,6292,True,20,Ang Mo Kio
+635,Master Degree,Public affairs consultant,6936,True,62,Jurong
+636,Master Degree,"Designer, television/film set",6433,False,30,Tampines
+637,Bachelor Degree,Furniture conservator/restorer,5718,False,22,Thomson
+638,Diploma,Broadcast journalist,7344,False,43,Changi
+639,Vocational,Hydrologist,11831,False,52,Loyang
+640,Vocational,Broadcast engineer,19085,False,44,Changi
+641,PhD,"Psychologist, clinical",12209,False,48,Alexandra Road
+642,Vocational,Research scientist (maths),6050,False,49,Tanjong Pagar
+643,Bachelor Degree,Youth worker,8052,False,48,Chinatown
+644,PhD,Heritage manager,11815,True,58,Tiong Bahru
+645,Diploma,"Surveyor, quantity",13512,False,34,Bukit Timah
+646,Diploma,Psychiatric nurse,19078,False,56,Boon Lay
+647,Vocational,"Programmer, systems",19965,False,60,Shenton Way
+648,Bachelor Degree,Sports coach,12707,False,54,Loyang
+649,Bachelor Degree,Banker,10801,False,20,Beach Road
+650,Vocational,Computer games developer,6362,False,59,Pasir Ris
+651,Bachelor Degree,Animal technologist,10462,False,44,Chinatown
+652,Vocational,"Engineer, drilling",9347,False,52,Alexandra Road
+653,Vocational,Textile designer,13368,True,45,Loyang
+654,Master Degree,"Engineer, chemical",11536,False,23,Bishan
+655,PhD,"Surveyor, land/geomatics",13463,False,23,Ang Mo Kio
+656,PhD,Minerals surveyor,14029,False,32,Raffles Place
+657,Bachelor Degree,Lexicographer,17652,False,23,Raffles Place
+658,PhD,Secondary school teacher,15735,False,41,Beach Road
+659,Bachelor Degree,Insurance underwriter,5336,False,45,Ang Mo Kio
+660,Diploma,Health and safety inspector,19596,False,28,Shenton Way
+661,Diploma,Human resources officer,5586,False,63,Beach Road
+662,Master Degree,"Engineer, communications",8215,False,35,Thomson
+663,Diploma,Contracting civil engineer,5125,False,44,Ang Mo Kio
+664,Vocational,Jewellery designer,16493,False,42,Ang Mo Kio
+665,Vocational,"Engineer, water",17617,False,26,Boon Lay
+666,Vocational,Holiday representative,5806,False,40,Yishun
+667,Vocational,Microbiologist,14642,False,37,Raffles Place
+668,Master Degree,Illustrator,18977,True,25,Hougang
+669,PhD,"Engineer, land",13679,False,37,Chinatown
+670,PhD,"Engineer, manufacturing systems",13390,False,32,Loyang
+671,Diploma,Camera operator,16820,False,58,Ang Mo Kio
+672,Master Degree,"Designer, television/film set",8319,True,38,Punggol
+673,Master Degree,Medical secretary,19700,True,48,Boon Lay
+674,Diploma,Insurance risk surveyor,11633,False,41,Tampines
+675,Vocational,Regulatory affairs officer,8326,False,58,Tanjong Pagar
+676,Diploma,Tree surgeon,12008,False,21,Raffles Place
+677,PhD,"Therapist, speech and language",5621,False,26,Pasir Ris
+678,Bachelor Degree,Dance movement psychotherapist,7164,False,60,Boon Lay
+679,Diploma,"Production assistant, radio",5701,False,25,Shenton Way
+680,Master Degree,Archivist,7681,False,57,Ang Mo Kio
+681,Diploma,Marine scientist,12628,False,26,Thomson
+682,Bachelor Degree,Commissioning editor,10325,True,55,Simei
+683,Vocational,Social researcher,8435,False,60,Loyang
+684,PhD,Lawyer,13342,False,63,Simei
+685,Bachelor Degree,Science writer,7105,False,38,Pasir Ris
+686,Diploma,Medical sales representative,11221,True,53,Alexandra Road
+687,Master Degree,"Development worker, community",16251,False,36,Bishan
+688,Vocational,Art therapist,5198,False,45,Tampines
+689,Master Degree,Furniture conservator/restorer,5169,False,20,Sengkang
+690,PhD,"Physicist, medical",8275,False,22,Tiong Bahru
+691,Vocational,"Radiographer, diagnostic",14614,False,53,Bugis
+692,Bachelor Degree,Music therapist,10654,False,62,Tampines
+693,Secondary,Local government officer,6905,True,46,Tampines
+694,Master Degree,"Engineer, aeronautical",7189,False,51,Loyang
+695,Master Degree,Insurance account manager,16555,False,64,Thomson
+696,Vocational,"Surveyor, building",5651,False,55,Bishan
+697,Master Degree,Heritage manager,17256,False,20,Tanjong Pagar
+698,Vocational,Regulatory affairs officer,5785,False,46,Simei
+699,Bachelor Degree,Health and safety adviser,17968,False,58,Sengkang
+700,Vocational,Tourist information centre manager,14114,True,40,Bishan
+701,Vocational,Electronics engineer,9660,False,28,Chinatown
+702,Diploma,"Therapist, drama",11230,False,48,Simei
+703,Bachelor Degree,Industrial/product designer,13028,True,53,Ang Mo Kio
+704,Diploma,Chief of Staff,12022,False,28,Chinatown
+705,Diploma,Soil scientist,10518,False,24,Tampines
+706,PhD,Music therapist,15500,False,40,Alexandra Road
+707,PhD,Emergency planning/management officer,15893,False,34,Alexandra Road
+708,Diploma,"Horticulturist, commercial",12434,False,53,Tampines
+709,Vocational,"Surveyor, planning and development",17232,False,65,Boon Lay
+710,Vocational,"Clinical scientist, histocompatibility and immunogenetics",5617,False,51,Shenton Way
+711,Bachelor Degree,"Geologist, wellsite",18139,True,45,Thomson
+712,Secondary,Civil Service fast streamer,5033,False,58,Ang Mo Kio
+713,Bachelor Degree,Restaurant manager,5398,True,62,Boon Lay
+714,Master Degree,Electronics engineer,13259,False,36,Pasir Ris
+715,Master Degree,"Engineer, petroleum",13502,False,65,Changi
+716,Vocational,Museum/gallery conservator,8979,False,54,Queenstown
+717,PhD,"Development worker, community",7563,False,55,Queenstown
+718,Bachelor Degree,Architectural technologist,12404,False,42,Alexandra Road
+719,Vocational,"Copywriter, advertising",5612,False,51,Rochor
+720,Bachelor Degree,"Surveyor, building control",13944,True,48,Sengkang
+721,Master Degree,"Conservator, museum/gallery",16922,False,56,Tanjong Pagar
+722,PhD,Community arts worker,10036,True,54,Loyang
+723,Master Degree,"Scientist, marine",15448,False,50,Bishan
+724,Vocational,Learning disability nurse,6145,False,27,Tampines
+725,Master Degree,Civil Service fast streamer,16274,False,48,Boon Lay
+726,Vocational,Aid worker,8093,False,46,Hougang
+727,Diploma,Equality and diversity officer,17917,False,43,Hougang
+728,Bachelor Degree,"Runner, broadcasting/film/video",6905,False,30,Chinatown
+729,Vocational,Tax adviser,12686,False,55,Loyang
+730,Vocational,"Teacher, English as a foreign language",17381,False,23,Bukit Timah
+731,Bachelor Degree,"Surveyor, hydrographic",15798,False,24,Tampines
+732,Secondary,Trade union research officer,5991,False,21,Ang Mo Kio
+733,Vocational,"Education officer, environmental",16172,False,54,Bishan
+734,Master Degree,Personnel officer,11906,False,59,Hougang
+735,Vocational,Financial trader,9655,False,59,Tanjong Pagar
+736,Vocational,Architect,10285,False,29,Yishun
+737,Master Degree,Homeopath,17876,False,29,Bishan
+738,Diploma,Chartered accountant,11890,True,41,Hougang
+739,PhD,Prison officer,18004,False,48,Queenstown
+740,Primary,Youth worker,8013,False,32,Tampines
+741,Master Degree,Research scientist (medical),19969,False,65,Thomson
+742,Vocational,"Doctor, hospital",19701,False,24,Tanjong Pagar
+743,Bachelor Degree,Charity fundraiser,16047,False,65,Queenstown
+744,Master Degree,Nature conservation officer,8954,True,40,Changi
+745,Vocational,Architect,7204,False,45,Tampines
+746,Master Degree,Biomedical scientist,15060,False,25,Punggol
+747,Primary,Diplomatic Services operational officer,6224,False,24,Bugis
+748,Vocational,Barrister's clerk,13133,False,25,Tanjong Pagar
+749,Vocational,Armed forces technical officer,16036,False,36,Beach Road
+750,Master Degree,Planning and development surveyor,18244,False,43,Ang Mo Kio
+751,Master Degree,"Designer, jewellery",12060,False,65,Changi
+752,Bachelor Degree,Radiation protection practitioner,14674,True,30,Bugis
+753,PhD,Osteopath,26718,False,62,Yishun
+754,PhD,Charity fundraiser,7018,False,45,Thomson
+755,Diploma,Maintenance engineer,16580,False,49,Tiong Bahru
+756,Vocational,TEFL teacher,18330,False,36,Queenstown
+757,Bachelor Degree,Food technologist,10239,False,26,Tampines
+758,Master Degree,Operational researcher,9668,True,63,Yishun
+759,Vocational,"Engineer, structural",11543,True,26,Jurong
+760,Primary,Product manager,9971,False,41,Chinatown
+761,Bachelor Degree,Arboriculturist,11117,False,23,Queenstown
+762,Bachelor Degree,Freight forwarder,15940,False,32,Alexandra Road
+763,Diploma,Media buyer,6357,False,24,Simei
+764,Secondary,Neurosurgeon,7075,False,33,Shenton Way
+765,Diploma,Legal executive,5218,True,34,Hougang
+766,Diploma,"Programmer, applications",10729,True,51,Pasir Ris
+767,Bachelor Degree,Surgeon,9215,True,61,Chinatown
+768,Bachelor Degree,Local government officer,18585,False,26,Yishun
+769,Vocational,Higher education careers adviser,14192,False,30,Chinatown
+770,Bachelor Degree,Automotive engineer,12868,False,27,Loyang
+771,Bachelor Degree,Passenger transport manager,16415,False,34,Changi
+772,Vocational,Banker,6232,True,47,Punggol
+773,PhD,Financial controller,6994,False,54,Jurong
+774,Diploma,Systems analyst,8739,True,45,Queenstown
+775,Diploma,Financial risk analyst,8139,True,60,Bishan
+776,Bachelor Degree,Bonds trader,17478,False,52,Boon Lay
+777,Master Degree,Warehouse manager,9432,False,60,Alexandra Road
+778,Diploma,"Editor, magazine features",9419,True,57,Tiong Bahru
+779,PhD,Plant breeder/geneticist,17422,False,31,Raffles Place
+780,Vocational,"Editor, film/video",19238,False,24,Shenton Way
+781,Master Degree,Mechanical engineer,11065,False,28,Rochor
+782,Master Degree,Marketing executive,14142,False,31,Hougang
+783,PhD,"Surveyor, mining",5805,False,51,Raffles Place
+784,Bachelor Degree,"Surveyor, quantity",10713,False,34,Pasir Ris
+785,PhD,"Psychologist, educational",18943,False,26,Thomson
+786,Diploma,Web designer,18364,False,52,Pasir Ris
+787,Master Degree,Herpetologist,11969,False,32,Tiong Bahru
+788,Vocational,Race relations officer,6026,True,60,Punggol
+789,PhD,Drilling engineer,16198,False,33,Yishun
+790,Diploma,Actuary,16496,False,51,Chinatown
+791,Vocational,"Accountant, chartered management",5338,False,54,Changi
+792,Master Degree,Advertising account executive,8889,False,51,Alexandra Road
+793,Master Degree,Energy engineer,16661,False,59,Loyang
+794,PhD,Psychiatric nurse,18903,False,61,Bukit Timah
+795,Diploma,Science writer,11048,False,30,Ang Mo Kio
+796,Master Degree,Haematologist,11473,False,49,Tampines
+797,Bachelor Degree,"Conservation officer, historic buildings",14088,False,50,Raffles Place
+798,Vocational,Chartered certified accountant,9464,False,49,Yishun
+799,Master Degree,Midwife,11522,True,45,Shenton Way
+800,Primary,Travel agency manager,5993,False,56,Hougang
+801,Master Degree,"Engineer, building services",13603,False,46,Bugis
+802,Master Degree,IT technical support officer,9036,True,28,Changi
+803,Master Degree,Careers adviser,16833,True,42,Chinatown
+804,Master Degree,Conference centre manager,6814,False,37,Bukit Timah
+805,Master Degree,"Nurse, children's",10480,False,40,Tampines
+806,Diploma,Optometrist,8913,False,45,Sengkang
+807,Diploma,Charity officer,13820,False,58,Punggol
+808,Master Degree,Careers information officer,18276,True,60,Queenstown
+809,PhD,Production manager,12783,True,56,Raffles Place
+810,Vocational,Warehouse manager,12978,False,65,Tanjong Pagar
+811,Bachelor Degree,Banker,13870,False,22,Tiong Bahru
+812,Vocational,"Biochemist, clinical",16954,False,63,Thomson
+813,PhD,"Engineer, agricultural",9123,False,23,Tanjong Pagar
+814,PhD,"Designer, graphic",12188,False,32,Ang Mo Kio
+815,PhD,Set designer,15537,False,44,Boon Lay
+816,Master Degree,"Programme researcher, broadcasting/film/video",8616,True,50,Loyang
+817,Vocational,IT sales professional,6323,True,36,Loyang
+818,PhD,Educational psychologist,6036,False,34,Shenton Way
+819,Master Degree,Medical secretary,10341,True,39,Simei
+820,PhD,Lobbyist,15408,False,32,Tampines
+821,Vocational,Probation officer,14179,False,56,Tampines
+822,Master Degree,Veterinary surgeon,8031,False,32,Thomson
+823,Bachelor Degree,Proofreader,5919,False,64,Simei
+824,Bachelor Degree,Furniture designer,19914,False,57,Sengkang
+825,Diploma,Building surveyor,17987,False,60,Simei
+826,Bachelor Degree,Television/film/video producer,12698,False,60,Bugis
+827,Diploma,"Engineer, communications",5430,False,64,Raffles Place
+828,Bachelor Degree,Solicitor,17922,False,20,Queenstown
+829,PhD,Editorial assistant,9602,False,26,Boon Lay
+830,Master Degree,"Scientist, research (maths)",6607,True,24,Beach Road
+831,PhD,Musician,14230,True,44,Changi
+832,Master Degree,Museum/gallery exhibitions officer,18839,False,38,Chinatown
+833,Master Degree,Immigration officer,9969,False,65,Changi
+834,Vocational,Photographer,7231,False,48,Raffles Place
+835,PhD,"Therapist, speech and language",11745,False,61,Shenton Way
+836,PhD,Risk analyst,12128,True,26,Tanjong Pagar
+837,PhD,Personal assistant,6123,False,28,Changi
+838,Diploma,Commercial/residential surveyor,18909,False,44,Loyang
+839,Vocational,"Psychologist, clinical",9464,False,47,Yishun
+840,Master Degree,Chief Financial Officer,6530,False,56,Queenstown
+841,Bachelor Degree,Geochemist,7944,False,20,Raffles Place
+842,Vocational,Web designer,9565,True,20,Loyang
+843,Bachelor Degree,"Surveyor, minerals",9999,True,22,Tampines
+844,PhD,Aeronautical engineer,8247,False,64,Queenstown
+845,Master Degree,"Solicitor, Scotland",5164,False,51,Tampines
+846,Bachelor Degree,Health promotion specialist,14735,True,53,Alexandra Road
+847,Vocational,Special educational needs teacher,5630,False,24,Bugis
+848,Diploma,Computer games developer,14784,False,44,Tampines
+849,Bachelor Degree,Systems analyst,8804,False,25,Jurong
+850,Master Degree,Architectural technologist,15940,False,27,Tanjong Pagar
+851,Secondary,Historic buildings inspector/conservation officer,5575,True,46,Beach Road
+852,Bachelor Degree,Glass blower/designer,7899,False,57,Tiong Bahru
+853,PhD,"Scientist, product/process development",12100,False,43,Bishan
+854,Bachelor Degree,Ergonomist,12122,False,30,Rochor
+855,Diploma,Sports therapist,18391,False,49,Jurong
+856,Vocational,Print production planner,12184,False,26,Bugis
+857,Diploma,"Administrator, Civil Service",12396,False,25,Queenstown
+858,Master Degree,Pharmacologist,10008,False,37,Boon Lay
+859,Bachelor Degree,Clinical embryologist,17062,True,31,Yishun
+860,PhD,Solicitor,19177,False,58,Chinatown
+861,Master Degree,Cytogeneticist,8685,False,58,Hougang
+862,Bachelor Degree,Print production planner,18549,True,38,Boon Lay
+863,Bachelor Degree,Social researcher,14729,False,64,Jurong
+864,Bachelor Degree,"Nurse, mental health",12755,False,45,Sengkang
+865,PhD,Electronics engineer,5151,False,63,Changi
+866,Diploma,Hospital doctor,16784,False,55,Hougang
+867,Diploma,Call centre manager,18144,False,59,Bugis
+868,Master Degree,Civil Service administrator,11133,False,62,Bishan
+869,PhD,Public affairs consultant,5983,False,22,Pasir Ris
+870,Master Degree,Manufacturing engineer,19706,False,37,Yishun
+871,Secondary,Hydrographic surveyor,9336,False,25,Tampines
+872,Secondary,Graphic designer,4288,False,38,Simei
+873,Vocational,Aeronautical engineer,4108,False,49,Bishan
+874,PhD,Human resources officer,17985,False,65,Shenton Way
+875,PhD,Advertising account executive,6890,False,57,Pasir Ris
+876,PhD,Fashion designer,14336,False,62,Tiong Bahru
+877,Bachelor Degree,Statistician,8108,True,46,Bukit Timah
+878,Bachelor Degree,Financial trader,13442,False,41,Chinatown
+879,Master Degree,Barrister,16903,False,37,Ang Mo Kio
+880,Primary,"Education officer, environmental",9834,False,28,Sengkang
+881,Diploma,Financial trader,9034,False,59,Yishun
+882,Master Degree,Architect,17291,False,26,Yishun
+883,Diploma,Fashion designer,10964,True,29,Chinatown
+884,Diploma,Armed forces logistics/support/administrative officer,11208,False,52,Simei
+885,Master Degree,Rural practice surveyor,18499,False,34,Raffles Place
+886,PhD,Advertising art director,7904,False,25,Changi
+887,Vocational,"Engineer, manufacturing",19955,True,38,Changi
+888,Diploma,Sports development officer,9909,True,61,Bishan
+889,Vocational,Print production planner,8500,True,55,Alexandra Road
+890,Bachelor Degree,Museum/gallery conservator,15451,True,48,Ang Mo Kio
+891,Master Degree,Civil Service fast streamer,5183,True,35,Queenstown
+892,Bachelor Degree,Airline pilot,15647,False,35,Changi
+893,Bachelor Degree,Data processing manager,13978,False,60,Changi
+894,Master Degree,Patent attorney,19341,True,56,Bukit Timah
+895,PhD,Heritage manager,17842,False,50,Bukit Timah
+896,Vocational,Seismic interpreter,11891,False,62,Chinatown
+897,Master Degree,Veterinary surgeon,14159,False,20,Boon Lay
+898,Bachelor Degree,Dentist,5284,False,62,Alexandra Road
+899,Bachelor Degree,Chartered legal executive (England and Wales),15985,False,24,Ang Mo Kio
+900,Primary,Art gallery manager,5597,True,27,Chinatown
+901,Vocational,"Engineer, maintenance",12078,False,24,Hougang
+902,Bachelor Degree,Community education officer,9359,False,62,Ang Mo Kio
+903,Bachelor Degree,Economist,10032,True,27,Raffles Place
+904,Secondary,"Research officer, government",9253,False,62,Yishun
+905,Vocational,Insurance claims handler,10595,False,42,Beach Road
+906,Master Degree,Stage manager,18238,True,46,Chinatown
+907,PhD,"Programmer, systems",8976,False,44,Hougang
+908,Diploma,Actuary,10854,False,27,Tampines
+909,Diploma,"Engineer, maintenance (IT)",17535,False,53,Hougang
+910,PhD,Brewing technologist,11551,False,30,Rochor
+911,Diploma,Building services engineer,12613,True,42,Alexandra Road
+912,PhD,Mental health nurse,6153,False,52,Chinatown
+913,Vocational,"Psychologist, sport and exercise",17020,False,43,Punggol
+914,Vocational,Financial adviser,8944,False,61,Sengkang
+915,Diploma,Operational researcher,12470,False,33,Hougang
+916,Bachelor Degree,Clinical research associate,8082,False,43,Yishun
+917,PhD,Barrister's clerk,29692,True,63,Sengkang
+918,Diploma,Community pharmacist,11790,False,44,Shenton Way
+919,Diploma,Biomedical engineer,16118,True,39,Chinatown
+920,Secondary,Press photographer,7930,False,24,Beach Road
+921,Diploma,"Surveyor, commercial/residential",6066,False,64,Punggol
+922,PhD,Financial risk analyst,13154,False,61,Punggol
+923,Master Degree,"Scientist, audiological",17770,False,53,Sengkang
+924,Diploma,Solicitor,6457,True,45,Chinatown
+925,Bachelor Degree,Dance movement psychotherapist,10245,False,27,Punggol
+926,Diploma,"Engineer, energy",13634,False,43,Alexandra Road
+927,Bachelor Degree,Leisure centre manager,12377,False,26,Tampines
+928,Bachelor Degree,Illustrator,13532,False,25,Ang Mo Kio
+929,Diploma,Sports development officer,6212,False,23,Yishun
+930,Vocational,"Surveyor, mining",10135,False,56,Boon Lay
+931,Diploma,"Solicitor, Scotland",16722,False,37,Raffles Place
+932,PhD,"Sound technician, broadcasting/film/video",19021,False,38,Queenstown
+933,PhD,Gaffer,6837,False,21,Simei
+934,Vocational,"Engineer, production",14406,False,55,Jurong
+935,PhD,"Therapist, music",6832,True,35,Tanjong Pagar
+936,Diploma,Recruitment consultant,18087,True,48,Shenton Way
+937,Master Degree,Chief Financial Officer,14739,False,41,Hougang
+938,PhD,Social worker,13281,False,65,Bugis
+939,Master Degree,Sports administrator,15466,False,28,Tiong Bahru
+940,PhD,Accommodation manager,6515,False,41,Alexandra Road
+941,Vocational,Insurance broker,9511,False,47,Bukit Timah
+942,Vocational,Science writer,13237,True,49,Thomson
+943,Vocational,Race relations officer,11183,False,33,Thomson
+944,Primary,"Nurse, learning disability",6748,False,41,Yishun
+945,Vocational,Electronics engineer,18808,False,53,Thomson
+946,Diploma,Visual merchandiser,9163,False,54,Beach Road
+947,Diploma,"Scientist, clinical (histocompatibility and immunogenetics)",18578,True,57,Queenstown
+948,Primary,Advertising account planner,5027,False,32,Tiong Bahru
+949,PhD,Secondary school teacher,26001,False,43,Queenstown
+950,Bachelor Degree,"Teacher, early years/pre",8274,False,37,Shenton Way
+951,PhD,"Research officer, trade union",15342,False,65,Rochor
+952,Bachelor Degree,Farm manager,6037,False,26,Loyang
+953,Bachelor Degree,Historic buildings inspector/conservation officer,8824,False,45,Bugis
+954,Diploma,Education administrator,19699,False,62,Boon Lay
+955,Primary,"Geologist, engineering",4537,False,37,Yishun
+956,Diploma,Theatre director,7141,False,61,Hougang
+957,Diploma,Licensed conveyancer,12665,False,51,Beach Road
+958,Vocational,Politician's assistant,16659,True,52,Queenstown
+959,PhD,Hospital pharmacist,7902,False,28,Simei
+960,Diploma,"Production assistant, television",9502,False,33,Tiong Bahru
+961,Vocational,Retail buyer,17878,False,23,Loyang
+962,PhD,Conference centre manager,7509,False,26,Queenstown
+963,PhD,Ranger/warden,5253,False,31,Simei
+964,Master Degree,Animator,7534,False,22,Raffles Place
+965,Vocational,Retail banker,10771,True,30,Thomson
+966,PhD,"Engineer, building services",17584,False,57,Jurong
+967,Secondary,Music tutor,4221,False,21,Hougang
+968,Bachelor Degree,Applications developer,15022,False,58,Hougang
+969,Bachelor Degree,Actor,9745,False,50,Tiong Bahru
+970,PhD,Technical brewer,16184,True,52,Beach Road
+971,Bachelor Degree,"Scientist, water quality",10499,False,34,Shenton Way
+972,Diploma,Astronomer,16787,False,25,Alexandra Road
+973,PhD,Acupuncturist,15754,False,50,Bugis
+974,PhD,Probation officer,17661,False,46,Chinatown
+975,PhD,Animal nutritionist,6968,False,48,Loyang
+976,Bachelor Degree,Museum/gallery conservator,5460,True,61,Yishun
+977,Bachelor Degree,Recruitment consultant,10273,False,29,Shenton Way
+978,Master Degree,"Surveyor, planning and development",16543,False,28,Simei
+979,Bachelor Degree,Building services engineer,13691,False,41,Tanjong Pagar
+980,Vocational,Merchant navy officer,15818,True,21,Loyang
+981,Master Degree,"Pharmacist, community",5581,False,53,Simei
+982,Diploma,"Restaurant manager, fast food",16249,False,57,Tiong Bahru
+983,Diploma,Catering manager,9024,False,28,Bugis
+984,Vocational,Gaffer,15665,False,61,Sengkang
+985,Master Degree,"Designer, interior/spatial",10000,False,28,Boon Lay
+986,Primary,"Designer, graphic",4888,False,59,Raffles Place
+987,PhD,Fine artist,10333,False,65,Bukit Timah
+988,Master Degree,Marketing executive,12798,True,63,Chinatown
+989,Bachelor Degree,"Scientist, physiological",7348,True,61,Loyang
+990,Master Degree,Production manager,18140,False,28,Yishun
+991,Vocational,"Scientist, research (life sciences)",16494,False,27,Alexandra Road
+992,PhD,Economist,17419,False,49,Sengkang
+993,Master Degree,Civil Service administrator,13803,False,49,Queenstown
+994,Master Degree,Exhibition designer,7632,False,36,Tanjong Pagar
+995,Primary,"Engineer, technical sales",8868,True,52,Thomson
+996,Secondary,Recycling officer,5757,False,26,Bishan
+997,Master Degree,Database administrator,19785,False,55,Alexandra Road
+998,Bachelor Degree,International aid/development worker,6655,False,37,Shenton Way
+999,PhD,Multimedia programmer,10458,False,47,Tiong Bahru
+1000,PhD,Health visitor,14195,False,52,Sengkang
