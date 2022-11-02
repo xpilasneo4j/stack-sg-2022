@@ -1,0 +1,26 @@
+CALL apoc.periodic.iterate("CALL apoc.load.csv('file:///person.csv', {sep:','}) YIELD map AS row RETURN row",
+"MERGE (p:Person {id: toInteger(row.id)})
+SET p.age = toInteger(row.age)
+MERGE (e:Education { education_level: row.education_level})
+MERGE (j:Job { title: row.job})
+MERGE (s:Salary { salary: row.salary})
+MERGE (h:Housing { name: row.housing})
+MERGE (ht:Housing_Type { name: row.housing_type})
+MERGE (p)-[:GRADUATED_WITH]->(e)
+MERGE (p)-[:WORKS_AS]->(j)-[:EARNING]->(s)
+MERGE (p)-[:EARNS]->(s)
+MERGE (p)-[:OWNS_HOUSING_TYPE]->(ht)
+MERGE (p)-[:LIVES_IN]->(h)
+WITH row, p, ht
+MATCH (p)-[:OWNS_HOUSING_TYPE]->(ht)
+MERGE (ht)-[:LIVING_IN]-(h)
+WITH row, p
+WHERE row.car_ownership = 'True'
+MERGE (c:Car { name: row.car})
+MERGE (p)-[:OWNS_CAR]->(c)
+WITH row, p
+WHERE row.pet_ownership = 'True' AND row.pet IS NOT NULL
+MERGE (pe:Pet { pet: row.pet})
+MERGE (p)-[:OWNS_PET]->(pe)
+",
+{batchSize:1000, parallel:false})
