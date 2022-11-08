@@ -13,7 +13,7 @@ CREATE CONSTRAINT cardConstraint IF NOT EXISTS FOR (x:Card) REQUIRE x.Card_ID IS
 
 // TO BE REMOVED ONCE TESTING IS OK
 //LOAD CSV WITH HEADERS FROM 'file:///transports.csv' AS row WITH row 
-LOAD CSV WITH HEADERS FROM 'https://github.com/xpilasneo4j/stack-sg-2022/blob/main/data/transports.csv' AS row WITH row 
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/transports.csv' AS row WITH row 
 MERGE (sIn:Station {name: row.Station_In})
 MERGE (sOut:Station {name: row.Station_Out})
 MERGE (c:Card {Card_ID: row.Card_ID})

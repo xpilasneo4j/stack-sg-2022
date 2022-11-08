@@ -17,7 +17,7 @@ SET tw.transaction_id = row.transaction_id
 SET tw.date = date(row.date)
 SET tw.category = row.category
 SET tw.transaction_type = row.transaction_type
-SET tw.transaction_amount = toFloat(transaction_amount);
+SET tw.transaction_amount = toFloat(row.transaction_amount);
 ;
 
 // QUERIES
