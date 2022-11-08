@@ -1,0 +1,27 @@
+// Cypher script to load the Credit Card data
+//
+// The dataset is a list of transactions made by some credit cards
+
+// First let's create unique constraints for each label
+CREATE CONSTRAINT creditCardConstraint IF NOT EXISTS FOR (x:CreditCard) REQUIRE x.credit_card_no IS UNIQUE;
+CREATE CONSTRAINT merchantConstraint IF NOT EXISTS FOR (x:Merchant) REQUIRE x.name IS UNIQUE;
+// TO ADD MORE...
+
+// TO BE REMOVED AFTER TESTING
+// LOAD CSV WITH HEADERS FROM 'file:///credit_card.csv'  AS row WITH row
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/credit_card.csv' AS row WITH row
+MERGE (cc:CreditCard {credit_card_no: row.credit_card_no})
+MERGE (m:Merchant {name: row.merchant})
+MERGE (cc)-[tw:TRANSACTED_WITH]->(m)
+SET tw.transaction_id = row.transaction_id
+SET tw.date = date(row.date)
+SET tw.category = row.category
+SET tw.transaction_type = row.transaction_type
+SET tw.transaction_amount = toFloat(transaction_amount);
+;
+
+// QUERIES
+
+//
+
+//
