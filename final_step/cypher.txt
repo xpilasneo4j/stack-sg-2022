@@ -1,0 +1,11 @@
+// Cypher script to load mappings between
+// - User and EZ Link Cards
+// - User and Credit Cards
+/////////////////////////////////////////////
+
+// TO BE REMOVED ONCE TESTING IS OK
+//LOAD CSV WITH HEADERS FROM 'file:///mapping_user_transport.csv' AS row WITH row 
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/mapping_user_transport.csv' AS row WITH row 
+MATCH (c:Card {Card_ID: row.Card_ID})
+MATCH (p:Person {id: toInteger(row.User_ID)})
+MERGE (c)-[:BELONGS_TO]->(u)

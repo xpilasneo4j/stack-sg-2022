@@ -1,8 +1,19 @@
+// Cypher script to load the Transportation data
+//
+// The dataset is a list of journeys between 2 MRT stations
+// During seven days
+// Each journey has a unique ID
+// We have the EZ Link card ID of each travel
+// We have the date and time of entry in the MRT
+
+// First let's create unique constraints for each label
 CREATE CONSTRAINT stationConstraint IF NOT EXISTS FOR (x:Station) REQUIRE x.name IS UNIQUE;
 CREATE CONSTRAINT travelConstraint IF NOT EXISTS FOR (x:Travel) REQUIRE x.xID IS UNIQUE;
 CREATE CONSTRAINT cardConstraint IF NOT EXISTS FOR (x:Card) REQUIRE x.Card_ID IS UNIQUE;
 
-LOAD CSV WITH HEADERS FROM 'file:///transports.csv' AS row WITH row 
+// TO BE REMOVED ONCE TESTING IS OK
+//LOAD CSV WITH HEADERS FROM 'file:///transports.csv' AS row WITH row 
+LOAD CSV WITH HEADERS FROM 'https://github.com/xpilasneo4j/stack-sg-2022/blob/main/data/transports.csv' AS row WITH row 
 MERGE (sIn:Station {name: row.Station_In})
 MERGE (sOut:Station {name: row.Station_Out})
 MERGE (c:Card {Card_ID: row.Card_ID})
@@ -12,3 +23,11 @@ SET t.Time = time(row.Time)
 MERGE (c)-[:PAID]->(t)
 MERGE (t)-[:STARTED]->(sIn)
 MERGE (t)-[:ENDED]->(sOut);
+
+// QUERIES
+
+// Let's find the more used MRT station during the week
+
+// Let's find the longest distance made by a user
+
+// 

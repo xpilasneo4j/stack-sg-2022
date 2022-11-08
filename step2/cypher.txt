@@ -1,5 +1,18 @@
-CALL apoc.periodic.iterate("CALL apoc.load.csv('file:///person.csv', {sep:','}) YIELD map AS row RETURN row",
-"MERGE (p:Person {id: toInteger(row.id)})
+// Cypher script to load the Person data
+//
+// The dataset is a list of persons with some oersonal details
+// Salary, Housing, Education,...
+
+// First let's create unique constraints for each label
+CREATE CONSTRAINT personConstraint IF NOT EXISTS FOR (x:Person) REQUIRE x.id IS UNIQUE;
+CREATE CONSTRAINT educationConstraint IF NOT EXISTS FOR (x:Education) REQUIRE x.education_level IS UNIQUE;
+CREATE CONSTRAINT jobConstraint IF NOT EXISTS FOR (x:Job) REQUIRE x.title IS UNIQUE;
+// TO ADD MORE...
+
+// TO BE REMOVED AFTER TESTING
+// LOAD CSV WITH HEADERS FROM 'file:///person.csv' AS row WITH row
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/person.csv' AS row WITH row
+MERGE (p:Person {id: toInteger(row.id)})
 SET p.age = toInteger(row.age)
 MERGE (e:Education { education_level: row.education_level})
 MERGE (j:Job { title: row.job})
@@ -21,6 +34,10 @@ MERGE (p)-[:OWNS_CAR]->(c)
 WITH row, p
 WHERE row.pet_ownership = 'True' AND row.pet IS NOT NULL
 MERGE (pe:Pet { pet: row.pet})
-MERGE (p)-[:OWNS_PET]->(pe)
-",
-{batchSize:1000, parallel:false})
+MERGE (p)-[:OWNS_PET]->(pe);
+
+// QUERIES
+
+//
+
+//
