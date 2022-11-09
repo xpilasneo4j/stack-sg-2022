@@ -1,0 +1,11 @@
+drop constraint creditCardConstraint;
+drop constraint educationConstraint;
+drop constraint housingConstraint;
+drop constraint housingTypeConstraint;
+drop constraint jobConstraint;
+drop constraint merchantConstraint;
+drop constraint personConstraint;
+drop constraint stationConstraint;
+drop constraint travelConstraint;
+
+match (n) detach delete n;
