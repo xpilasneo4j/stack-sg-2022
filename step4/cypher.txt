@@ -5,6 +5,7 @@
 // First let's create unique constraints for each label
 CREATE CONSTRAINT creditCardConstraint IF NOT EXISTS FOR (x:CreditCard) REQUIRE x.credit_card_no IS UNIQUE;
 CREATE CONSTRAINT merchantConstraint IF NOT EXISTS FOR (x:Merchant) REQUIRE x.name IS UNIQUE;
+CREATE CONSTRAINT categoryConstraint IF NOT EXISTS FOR (x:Category) REQUIRE x.category IS NODE KEY;
 // TO ADD MORE...
 
 // TO BE REMOVED AFTER TESTING
@@ -12,15 +13,52 @@ CREATE CONSTRAINT merchantConstraint IF NOT EXISTS FOR (x:Merchant) REQUIRE x.na
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/credit_card.csv' AS row WITH row
 MERGE (cc:CreditCard {credit_card_no: row.credit_card_no})
 MERGE (m:Merchant {name: row.merchant})
+MERGE (ca:Category {category: row.category})
 MERGE (cc)-[tw:TRANSACTED_WITH]->(m)
 SET tw.transaction_id = row.transaction_id
 SET tw.date = date(row.date)
 SET tw.category = row.category
 SET tw.transaction_type = row.transaction_type
-SET tw.transaction_amount = toFloat(row.transaction_amount);
+SET tw.transaction_amount = toFloat(row.transaction_amount)
+MERGE (m)-[:OF_CATEGORY]->(ca)
 
 // QUERIES
+//How many transactions were made on 11/11?
+MATCH (n:CreditCard)-[tw:TRANSACTED_WITH]-(m)
+WHERE tw.date = date('2022-11-11')
+RETURN count(n) AS count_transaction
 
-//
+//Find the highest transacted merchant by count of transactions on 11/11.
+MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)
+WHERE tw.date = date('2022-11-11')
+RETURN count(c) as transaction_count, m.name AS merchant_name
+ORDER BY transaction_count DESC
 
-//
+//Which category has the highest sales on 11/11?
+MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)-[:OF_CATEGORY]->(co:Category)
+WHERE tw.date = date('2022-11-11')
+RETURN sum(tw.transaction_amount) as total_transaction, co.category AS retail_category
+ORDER BY total_transaction DESC
+
+//Retrieve the total transaction amount by transaction_type (online and offline) over the period of duration
+MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)
+RETURN tw.transaction_type as transaction_type, sum(tw.transaction_amount) as total_transaction
+
+//Find the highest transaction count for a credit card for the Retail category over the period of duration
+MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)-[:OF_CATEGORY]->(co:Category)
+WHERE co.category = "Retail"
+RETURN count(tw) as transaction_count, c.credit_card_no as credit_card_no
+ORDER BY transaction_count DESC
+
+//On weekday vs on weekend highest category transaction count 
+MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)-[:OF_CATEGORY]->(co:Category)
+WHERE date('2022-11-07') <= tw.date <= date('2022-11-11')
+RETURN count(co.category) as transaction_count , co.category as category
+ORDER BY transaction_count DESC
+LIMIT 1
+UNION 
+MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)-[:OF_CATEGORY]->(co:Category)
+WHERE date('2022-11-12') <= tw.date <= date('2022-11-13')
+RETURN count(co.category) as transaction_count , co.category as category
+ORDER BY transaction_count DESC
+LIMIT 1

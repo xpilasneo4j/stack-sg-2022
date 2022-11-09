@@ -25,9 +25,6 @@ MERGE (p)-[wa:WORKS_AS]->(j)
 SET wa.salary = toInteger(row.salary)
 MERGE (p)-[:OWNS_HOUSING_TYPE]->(ht)
 MERGE (p)-[:LIVES_IN]->(h)
-WITH row, p, ht
-MATCH (p)-[:OWNS_HOUSING_TYPE]->(ht)
-MERGE (ht)-[:LIVING_IN]-(h)
 WITH row, p
 WHERE row.car_ownership = 'True'
 MERGE (c:Car { name: row.car})
