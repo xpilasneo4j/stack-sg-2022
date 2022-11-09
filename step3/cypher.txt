@@ -2,8 +2,7 @@
 //
 // First we will create the lines of the Singapore MRT
 // And then we will load a list of journeys between 2 MRT stations
-// During seven days
-// Each journey has a unique ID
+// During seven days. Each journey has a unique ID
 // We have the EZ Link card ID of each travel
 // We have the date and time of entry in the MRT
 
@@ -22,6 +21,19 @@ CALL apoc.create.relationship(s1, row.Line,{}, s2) yield rel
 REMOVE rel.noOp;
 
 // QUERIES
+
+// What is the nearest station from the Neo4j office (1.285652998284201, 103.84796600533471)
+MATCH (near:Station)
+WITH near, near.point AS start, point({latitude: 1.285652998284201, longitude: 103.84796600533471}) AS neo4j
+WITH near, point.distance(start, neo4j) AS distance
+RETURN near, distance ORDER BY distance ASC LIMIT 1
+
+// Shrotest path by stations !
+MATCH (near:Station)
+WITH near, near.point AS start, point({latitude: 1.285652998284201, longitude: 103.84796600533471}) AS neo4j
+WITH near, point.distance(start, neo4j) AS distance ORDER BY distance ASC LIMIT 1
+MATCH path = allShortestPaths( (near)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(:Station {name: 'YISHUN'}) )
+RETURN path
 
 // Then let's load some journeys
 
