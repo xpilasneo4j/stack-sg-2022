@@ -16,7 +16,7 @@ MERGE (p:Person {id: toInteger(row.id)})
 SET p.age = toInteger(row.age)
 MERGE (e:Education { education_level: row.education_level})
 MERGE (j:Job { title: row.job})
-MERGE (s:Salary { salary: row.salary})
+MERGE (s:Salary { salary: toInteger(row.salary)})
 MERGE (h:Housing { name: row.housing})
 MERGE (ht:Housing_Type { name: row.housing_type})
 MERGE (p)-[:GRADUATED_WITH]->(e)
@@ -37,7 +37,34 @@ MERGE (pe:Pet { pet: row.pet})
 MERGE (p)-[:OWNS_PET]->(pe);
 
 // QUERIES
+// Retrieve all Person Node
+MATCH (p:Person) RETURN p
 
-//
+// Retrieve a Person node with a specific property, e.g. id 1
+MATCH (p:Person { id: 1 }) RETURN p
 
-//
+// What's the salary of Person with id 1
+MATCH (p:Person { id: 1 })-[:EARNS]-(salary)
+RETURN p, salary
+
+// Who earns the highest salary? Return the Person's id and the Salary.
+MATCH (p:Person)-[:EARNS]-(s:Salary)
+RETURN s.salary as salary, p.id as id
+ORDER BY salary DESC LIMIT 1
+
+// How many people own a pet?
+MATCH (p:Person)-[:OWNS_PET]-(n:Pet) 
+RETURN count(p) AS count_person_pet
+
+// How many people own a BMW?
+MATCH (p:Person)-[:OWNS_CAR]-(c:Car { name: "BMW"}) 
+RETURN count(p) AS count_person_car
+
+// How many people owns both a dog and a car?
+MATCH (c:Car)<-[:OWNS_CAR]-(p:Person)-[:OWNS_PET]->(pe:Pet { pet: "Dog"}) 
+RETURN count(p)
+
+// How many people earn more than 10000 and live in a private property and do not have a degree
+MATCH (h)<-[:OWNS_HOUSING_TYPE]-(p:Person)-[:EARNS]->(s)
+WHERE s.salary > 10000 AND h.name = "Private" AND NOT exists {(p)-[:GRADUATED_WITH]->(e:Education) WHERE e.education_level ENDS WITH "Degree"}
+RETURN count(p) as count_person
