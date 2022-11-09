@@ -9,14 +9,14 @@
 // First let's create unique constraints for each label
 CREATE CONSTRAINT stationConstraint IF NOT EXISTS FOR (x:Station) REQUIRE x.name IS UNIQUE;
 CREATE CONSTRAINT travelConstraint IF NOT EXISTS FOR (x:Travel) REQUIRE x.xID IS UNIQUE;
-CREATE CONSTRAINT cardConstraint IF NOT EXISTS FOR (x:Card) REQUIRE x.Card_ID IS UNIQUE;
+CREATE CONSTRAINT cardConstraint IF NOT EXISTS FOR (x:TransportCard) REQUIRE x.Card_ID IS UNIQUE;
 
 // TO BE REMOVED ONCE TESTING IS OK
 //LOAD CSV WITH HEADERS FROM 'file:///transports.csv' AS row WITH row 
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/transports.csv' AS row WITH row 
 MERGE (sIn:Station {name: row.Station_In})
 MERGE (sOut:Station {name: row.Station_Out})
-MERGE (c:Card {Card_ID: row.Card_ID})
+MERGE (c:TransportCard {Card_ID: row.Card_ID})
 MERGE (t:Travel {xID: row.xID})
 SET t.Date = date(row.Date)
 SET t.Time = time(row.Time)

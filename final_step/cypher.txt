@@ -6,6 +6,12 @@
 // TO BE REMOVED ONCE TESTING IS OK
 //LOAD CSV WITH HEADERS FROM 'file:///mapping_user_transport.csv' AS row WITH row 
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/mapping_user_transport.csv' AS row WITH row 
-MATCH (c:Card {Card_ID: row.Card_ID})
+MATCH (c:TransportCard {Card_ID: row.Card_ID})
+MATCH (p:Person {id: toInteger(row.person_id)})
+MERGE (c)-[:BELONGS_TO]->(u);
+
+//LOAD CSV WITH HEADERS FROM 'file:///mapping_person_credit_card.csv' AS row WITH row 
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/mapping_person_credit_card.csv' AS row WITH row 
+MATCH (c:CreditCard {credit_card_no: row.credit_card_no})
 MATCH (p:Person {id: toInteger(row.person_id)})
 MERGE (c)-[:BELONGS_TO]->(u)
