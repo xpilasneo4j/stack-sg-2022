@@ -13,8 +13,7 @@ CREATE CONSTRAINT stationConstraint IF NOT EXISTS FOR (x:Station) REQUIRE x.name
 // Let's generate the MRT Map
 //LOAD CSV WITH HEADERS FROM 'file:///mrt_singapore.csv' AS row WITH row 
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/mrt_singapore.csv' AS row WITH row 
-
-merge (s1:Station {name: row.S1})
+MERGE (s1:Station {name: row.S1})
 SET s1.point = point({x:toFloat(row.Lat), y:toFloat(row.Long), srid: 4326})
 SET s1.lines = row.Lines
 MERGE (s2:Station {name:row.S2})
@@ -28,7 +27,7 @@ REMOVE rel.noOp;
 
 // Let's create unique constraints for each label
 CREATE CONSTRAINT travelConstraint IF NOT EXISTS FOR (x:Travel) REQUIRE x.xID IS UNIQUE;
-CREATE CONSTRAINT cardConstraint IF NOT EXISTS FOR (x:TransportCard) REQUIRE x.Card_ID IS UNIQUE;
+CREATE CONSTRAINT transportCardConstraint IF NOT EXISTS FOR (x:TransportCard) REQUIRE x.Card_ID IS UNIQUE;
 
 // TO BE REMOVED ONCE TESTING IS OK
 //LOAD CSV WITH HEADERS FROM 'file:///transports.csv' AS row WITH row 
