@@ -1,12 +1,30 @@
 // Cypher script to load the Transportation data
 //
-// The dataset is a list of journeys between 2 MRT stations
+// First we will create the lines of the Singapore MRT
+// And then we will load a list of journeys between 2 MRT stations
 // During seven days
 // Each journey has a unique ID
 // We have the EZ Link card ID of each travel
 // We have the date and time of entry in the MRT
 
-// First let's create unique constraints for each label
+// First let's create unique constraints for each station
+CREATE CONSTRAINT stationConstraint IF NOT EXISTS FOR (x:Station) REQUIRE x.name IS UNIQUE;
+
+// Let's generate the MRT Map
+LOAD CSV WITH HEADERS FROM 'file:///mrt_singapore.csv' AS row WITH row 
+merge (s1:Station {name: row.S1})
+SET s1.point = point({x:toFloat(row.Lat), y:toFloat(row.Long), srid: 4326})
+SET s1.lines = row.Lines
+MERGE (s2:Station {name:row.S2})
+with s1, s2, row
+CALL apoc.create.relationship(s1, row.Line,{}, s2) yield rel
+REMOVE rel.noOp;
+
+// QUERIES
+
+// Then let's load some journeys
+
+// Let's create unique constraints for each label
 CREATE CONSTRAINT travelConstraint IF NOT EXISTS FOR (x:Travel) REQUIRE x.xID IS UNIQUE;
 CREATE CONSTRAINT cardConstraint IF NOT EXISTS FOR (x:TransportCard) REQUIRE x.Card_ID IS UNIQUE;
 
