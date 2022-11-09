@@ -7,7 +7,6 @@
 // We have the date and time of entry in the MRT
 
 // First let's create unique constraints for each label
-CREATE CONSTRAINT stationConstraint IF NOT EXISTS FOR (x:Station) REQUIRE x.name IS UNIQUE;
 CREATE CONSTRAINT travelConstraint IF NOT EXISTS FOR (x:Travel) REQUIRE x.xID IS UNIQUE;
 CREATE CONSTRAINT cardConstraint IF NOT EXISTS FOR (x:TransportCard) REQUIRE x.Card_ID IS UNIQUE;
 
