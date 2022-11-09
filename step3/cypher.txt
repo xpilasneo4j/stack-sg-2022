@@ -11,7 +11,9 @@
 CREATE CONSTRAINT stationConstraint IF NOT EXISTS FOR (x:Station) REQUIRE x.name IS UNIQUE;
 
 // Let's generate the MRT Map
-LOAD CSV WITH HEADERS FROM 'file:///mrt_singapore.csv' AS row WITH row 
+//LOAD CSV WITH HEADERS FROM 'file:///mrt_singapore.csv' AS row WITH row 
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/mrt_singapore.csv' AS row WITH row 
+
 merge (s1:Station {name: row.S1})
 SET s1.point = point({x:toFloat(row.Lat), y:toFloat(row.Long), srid: 4326})
 SET s1.lines = row.Lines
