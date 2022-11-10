@@ -1,34 +1,47 @@
-// Cypher script to load the Transportation data
+// Neo4j Stack 2022 - Data-graphi-cation
+// Monday 14th November 2022 - 1:30pm - 3:30pm
+// https://neo4j.com/cloud/platform/aura-graph-database/
+
+////////////////////////////////////////////////////////
+
+// Second dataset - Transportation data
 //
-// First we will create the lines of the Singapore MRT
-// And then we will load a list of journeys between 2 MRT stations
-// During seven days. Each journey has a unique ID
+// The first part of this dataset is the Singapore MRT Map
+// And then we will load a list of journeys between MRT stations
+// which happened during seven days. Each journey has a unique ID
 // We have the EZ Link card ID of each travel
-// We have the date and time of entry in the MRT
+// We have the date and time of entry in the MRT.
 
-// First let's create unique constraints for each station
+////////////////////////////////////////////////////////
+
+// Cypher code to load the data and to perform some queries
+
+// First let's create a unique constraint for each station based on the name
 CREATE CONSTRAINT stationConstraint IF NOT EXISTS FOR (x:Station) REQUIRE x.name IS UNIQUE;
+//
 
-// Let's generate the MRT Map
-//LOAD CSV WITH HEADERS FROM 'file:///mrt_singapore.csv' AS row WITH row 
+// Let's generate the MRT Map - Ww're using APOC https://neo4j.com/developer/neo4j-apoc/
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/mrt_singapore.csv' AS row WITH row 
 MERGE (s1:Station {name: row.S1})
 SET s1.point = point({latitude:toFloat(row.Lat), longitude:toFloat(row.Long), srid: 4326})
 SET s1.lines = row.Lines
 MERGE (s2:Station {name:row.S2})
+SET s2.point = point({latitude:toFloat(row.Lat2), longitude:toFloat(row.Long2), srid: 4326})
+SET s2.lines = row.Lines2
 with s1, s2, row
 CALL apoc.create.relationship(s1, row.Line,{}, s2) yield rel
 REMOVE rel.noOp;
+//
 
-// QUERIES
+// Queries on the MRT map
 
-// What is the nearest station from the Neo4j office (1.285652998284201, 103.84796600533471)
+// 1. What is the nearest station from the Neo4j office (1.285652998284201, 103.84796600533471)
 MATCH (near:Station)
 WITH near, near.point AS start, point({latitude: 1.285652998284201, longitude: 103.84796600533471}) AS neo4j
 WITH near, point.distance(start, neo4j) AS distance
 RETURN near, distance ORDER BY distance ASC LIMIT 1;
 
-// Shortest path by stations !
+// 2. How to go to Yishun from the Neo4j office with the least stations traveled
 MATCH (near:Station)
 WITH near, near.point AS start, point({latitude: 1.285652998284201, longitude: 103.84796600533471}) AS neo4j
 WITH near, point.distance(start, neo4j) AS distance ORDER BY distance ASC LIMIT 1
@@ -40,9 +53,9 @@ RETURN path;
 // Let's create unique constraints for each label
 CREATE CONSTRAINT travelConstraint IF NOT EXISTS FOR (x:Travel) REQUIRE x.xID IS UNIQUE;
 CREATE CONSTRAINT transportCardConstraint IF NOT EXISTS FOR (x:TransportCard) REQUIRE x.Card_ID IS UNIQUE;
+//
 
 // TO BE REMOVED ONCE TESTING IS OK
-//LOAD CSV WITH HEADERS FROM 'file:///transports.csv' AS row WITH row 
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/transports.csv' AS row WITH row 
 MERGE (sIn:Station {name: row.Station_In})
 MERGE (sOut:Station {name: row.Station_Out})
@@ -53,39 +66,44 @@ SET t.Time = time(row.Time)
 MERGE (c)-[:PAID]->(t)
 MERGE (t)-[:STARTED]->(sIn)
 MERGE (t)-[:ENDED]->(sOut);
+//
 
-// QUERIES
+// Queries
 
-// Let's find the most used MRT station
-match (s:Station)-[:ENDED|STARTED]-(t:Travel) with s.name as name, count(t) as nbT return name, nbT order by nbT limit 1;
+// 3. Let's find the most used MRT station
+MATCH (s:Station)-[:ENDED|STARTED]-(t:Travel) WITH s.name AS name, count(t) AS nbT RETURN name, nbT ORDER BY nbT LIMIT 1;
 
-// Let's find the most used MRT station durign the week
-match (s:Station)-[:ENDED|STARTED]-(t:Travel) where t.Date <= date('2022-11-12') with s.name as name, count(t) as nbT return name, nbT order by nbT limit 1;
+// 4. Let's find the most used MRT station durign the week
+MATCH (s:Station)-[:ENDED|STARTED]-(t:Travel) WHERE t.Date <= date('2022-11-12') WITH s.name AS name, count(t) AS nbT RETURN name, nbT ORDER BY nbT LIMIT 1;
 
-// 
-match (s1:Station)-[t:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE]->(s2:Station) set t.dist = point.distance(s1.point, s2.point);
+// Let's add the distance on our graph !
+MATCH (s1:Station)-[t:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE]->(s2:Station) set t.dist = point.distance(s1.point, s2.point);
 
-match (s1:Station {name: 'ORCHARD'})
-match (s2:Station {name: 'YISHUN'})
-match p = shortestPath((s1)-[:NS*]-(s2))
-return s1.name, s2.name, reduce(s=0, i in relationships(p) | s+i.dist) as distance;
+// 5. What is the distance between Orchard and Yishun using the North South Line
+MATCH (s1:Station {name: 'ORCHARD'})
+MATCH (s2:Station {name: 'YISHUN'})
+MATCH p = shortestPath((s1)-[:NS*]-(s2))
+RETURN s1.name, s2.name, reduce(s=0, i in relationships(p) | s+i.dist) AS distance;
 
-match (s1:Station {name: 'ORCHARD'})
-match (s2:Station {name: 'YISHUN'})
-match p = shortestPath((s1)-[:NS*]-(s2))
-return p;
+// 5bis. What is the path between Orchard and Yishun using the North South Line
+MATCH (s1:Station {name: 'ORCHARD'})
+MATCH (s2:Station {name: 'YISHUN'})
+MATCH p = shortestPath((s1)-[:NS*]-(s2))
+RETURN p;
 
-match (s1:Station {name: 'ORCHARD'})
-match (s2:Station {name: 'YISHUN'})
-match p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
-return s1.name, s2.name, reduce(s=0, i in relationships(p) | s+i.dist) as distance;
+// 6. What is the distance between Orchard and Yishun using the all lines
+MATCH (s1:Station {name: 'ORCHARD'})
+MATCH (s2:Station {name: 'YISHUN'})
+MATCH p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
+RETURN s1.name, s2.name, reduce(s=0, i in relationships(p) | s+i.dist) AS distance;
 
-match (s1:Station {name: 'ORCHARD'})
-match (s2:Station {name: 'YISHUN'})
-match p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
-return p;
+// 6bis. What is the shortest path between Orchard and Yishun using the all lines
+MATCH (s1:Station {name: 'ORCHARD'})
+MATCH (s2:Station {name: 'YISHUN'})
+MATCH p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
+RETURN p;
 
-match (s1)-[:STARTED]-(t:Travel)-[:ENDED]-(s2) where s1.name <> s2.name
-match p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
-with t, s1, s2, reduce(s=0, i in relationships(p) | s+i.dist) as distance
-return t.xID, s1.name, s2.name, distance order by distance desc;
+MATCH (s1)-[:STARTED]-(t:Travel)-[:ENDED]-(s2) WHERE s1.name <> s2.name
+MATCH p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
+WITH t, s1, s2, reduce(s=0, i in relationships(p) | s+i.dist) AS distance
+RETURN t.xID, s1.name, s2.name, distance ORDER BY distance DESC;

@@ -1,3 +1,13 @@
+// Neo4j Stack 2022 - Data-graphi-cation
+// Monday 14th November 2022 - 1:30pm - 3:30pm
+// https://neo4j.com/cloud/platform/aura-graph-database/
+
+////////////////////////////////////////////////////////
+//
+// Cypher code to remove all on the DB
+//
+////////////////////////////////////////////////////////
+
 drop constraint creditCardConstraint;
 drop constraint educationConstraint;
 drop constraint housingConstraint;
@@ -7,5 +17,4 @@ drop constraint merchantConstraint;
 drop constraint personConstraint;
 drop constraint stationConstraint;
 drop constraint travelConstraint;
-
 match (n) detach delete n;

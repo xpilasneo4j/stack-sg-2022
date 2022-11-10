@@ -1,15 +1,23 @@
-// Cypher script to load the Credit Card data
+// Neo4j Stack 2022 - Data-graphi-cation
+// Monday 14th November 2022 - 1:30pm - 3:30pm
+// https://neo4j.com/cloud/platform/aura-graph-database/
+
+////////////////////////////////////////////////////////
+
+// Third dataset - Credit Card data
 //
 // The dataset is a list of transactions made by some credit cards
+// You have the amount, the merchant, the date
+//
+////////////////////////////////////////////////////////
 
 // First let's create unique constraints for each label
 CREATE CONSTRAINT creditCardConstraint IF NOT EXISTS FOR (x:CreditCard) REQUIRE x.credit_card_no IS UNIQUE;
 CREATE CONSTRAINT merchantConstraint IF NOT EXISTS FOR (x:Merchant) REQUIRE x.name IS UNIQUE;
 CREATE CONSTRAINT categoryConstraint IF NOT EXISTS FOR (x:Category) REQUIRE x.category IS NODE KEY;
-// TO ADD MORE...
+//
 
-// TO BE REMOVED AFTER TESTING
-// LOAD CSV WITH HEADERS FROM 'file:///credit_card.csv'  AS row WITH row
+// Let's load the dataset with all the transactions
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/credit_card.csv' AS row WITH row
 MERGE (cc:CreditCard {credit_card_no: row.credit_card_no})
 MERGE (m:Merchant {name: row.merchant})
@@ -20,37 +28,39 @@ SET tw.date = date(row.date)
 SET tw.category = row.category
 SET tw.transaction_type = row.transaction_type
 SET tw.transaction_amount = toFloat(row.transaction_amount)
-MERGE (m)-[:OF_CATEGORY]->(ca)
+MERGE (m)-[:OF_CATEGORY]->(ca);
+//
 
-// QUERIES
-//How many transactions were made on 11/11?
+// Queries
+
+// 1.How many transactions were made on 11/11?
 MATCH (n:CreditCard)-[tw:TRANSACTED_WITH]-(m)
 WHERE tw.date = date('2022-11-11')
-RETURN count(n) AS count_transaction
+RETURN count(n) AS count_transaction;
 
-//Find the highest transacted merchant by count of transactions on 11/11.
+// 2.Find the highest transacted merchant by count of transactions on 11/11.
 MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)
 WHERE tw.date = date('2022-11-11')
 RETURN count(c) as transaction_count, m.name AS merchant_name
-ORDER BY transaction_count DESC
+ORDER BY transaction_count DESC;
 
-//Which category has the highest sales on 11/11?
+// 3.Which category has the highest sales on 11/11?
 MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)-[:OF_CATEGORY]->(co:Category)
 WHERE tw.date = date('2022-11-11')
 RETURN sum(tw.transaction_amount) as total_transaction, co.category AS retail_category
-ORDER BY total_transaction DESC
+ORDER BY total_transaction DESC;
 
-//Retrieve the total transaction amount by transaction_type (online and offline) over the period of duration
+// 4.Retrieve the total transaction amount by transaction_type (online and offline) over the period of duration
 MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)
-RETURN tw.transaction_type as transaction_type, sum(tw.transaction_amount) as total_transaction
+RETURN tw.transaction_type as transaction_type, sum(tw.transaction_amount) as total_transaction;
 
-//Find the highest transaction count for a credit card for the Retail category over the period of duration
+// 5.Find the highest transaction count for a credit card for the Retail category over the period of duration
 MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)-[:OF_CATEGORY]->(co:Category)
 WHERE co.category = "Retail"
 RETURN count(tw) as transaction_count, c.credit_card_no as credit_card_no
-ORDER BY transaction_count DESC
+ORDER BY transaction_count DESC;
 
-//On weekday vs on weekend highest category transaction count 
+// 6. On weekday vs on weekend highest category transaction count 
 MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)-[:OF_CATEGORY]->(co:Category)
 WHERE date('2022-11-07') <= tw.date <= date('2022-11-11')
 RETURN count(co.category) as transaction_count , co.category as category
@@ -61,4 +71,4 @@ MATCH (c:CreditCard)-[tw:TRANSACTED_WITH]->(m:Merchant)-[:OF_CATEGORY]->(co:Cate
 WHERE date('2022-11-12') <= tw.date <= date('2022-11-13')
 RETURN count(co.category) as transaction_count , co.category as category
 ORDER BY transaction_count DESC
-LIMIT 1
+LIMIT 1;

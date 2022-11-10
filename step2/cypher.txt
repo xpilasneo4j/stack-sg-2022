@@ -1,7 +1,15 @@
-// Cypher script to load the Person data
+// Neo4j Stack 2022 - Data-graphi-cation
+// Monday 14th November 2022 - 1:30pm - 3:30pm
+// https://neo4j.com/cloud/platform/aura-graph-database/
+
+////////////////////////////////////////////////////////
 //
-// The dataset is a list of persons with some oersonal details
+// First dataset - People data
+//
+// This dataset is a list of persons with personal details
 // Salary, Housing, Education,...
+//
+////////////////////////////////////////////////////////
 
 // First let's create unique constraints for each label
 CREATE CONSTRAINT personConstraint IF NOT EXISTS FOR (x:Person) REQUIRE x.id IS UNIQUE;
@@ -9,10 +17,9 @@ CREATE CONSTRAINT educationConstraint IF NOT EXISTS FOR (x:Education) REQUIRE x.
 CREATE CONSTRAINT jobConstraint IF NOT EXISTS FOR (x:Job) REQUIRE x.title IS UNIQUE;
 CREATE CONSTRAINT housingConstraint IF NOT EXISTS FOR (x:Housing) REQUIRE x.name IS UNIQUE;
 CREATE CONSTRAINT housingTypeConstraint IF NOT EXISTS FOR (x:Housing_Type) REQUIRE x.name IS UNIQUE;
-// TO ADD MORE...
+// 
 
-// TO BE REMOVED AFTER TESTING
-// LOAD CSV WITH HEADERS FROM 'file:///person.csv' AS row WITH row
+// Let's load the dataset from a CSV file and create nodes and relationships
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/person.csv' AS row WITH row
 MERGE (p:Person {id: toInteger(row.id)})
 SET p.age = toInteger(row.age)
@@ -33,36 +40,40 @@ WITH row, p
 WHERE row.pet_ownership = 'True' AND row.pet IS NOT NULL
 MERGE (pe:Pet { pet: row.pet})
 MERGE (p)-[:OWNS_PET]->(pe);
+//
 
-// QUERIES
-// Retrieve all Person Node
+// Queries
+
+// 1. Retrieve all Person nodes
 MATCH (p:Person) RETURN p;
 
-// Retrieve a Person node with a specific property, e.g. id 1
+// 2. Retrieve a Person node with a specific property, e.g. id 1
 MATCH (p:Person { id: 1 }) RETURN p;
 
-// What's the salary of Person with id 1
+// 3. What's the salary of Person with id 1
 MATCH (p:Person { id: 1 })-[wa:WORKS_AS]->()
 RETURN p.id, wa.salary;
 
-// Who earns the highest salary? Return the Person's id and the Salary.
+// 4. Who earns the highest salary? Return the Person's id and the Salary.
 MATCH (p:Person)-[wa:WORKS_AS]-()
 RETURN wa.salary as salary, p.id as id
 ORDER BY salary DESC LIMIT 1;
 
-// How many people own a pet?
+// 5. How many people own a pet?
 MATCH (p:Person)-[:OWNS_PET]->(n:Pet) 
 RETURN count(p) AS count_person_pet;
 
-// How many people own a BMW?
+// 6. How many people own a BMW?
 MATCH (p:Person)-[:OWNS_CAR]-(c:Car { name: "BMW"}) 
 RETURN count(p) AS count_person_car;
 
-// How many people owns both a dog and a car?
+// 7. How many people owns both a dog and a car?
 MATCH (c:Car)<-[:OWNS_CAR]-(p:Person)-[:OWNS_PET]->(pe:Pet { pet: "Dog"}) 
 RETURN count(p);
 
-// How many people earn more than 10000 and live in a private property and do not have a degree
+// 8. How many people earn more than 10000 and live in a private property and do not have a degree
 MATCH (h)<-[:OWNS_HOUSING_TYPE]-(p:Person)-[wa:WORKS_AS]->()
 WHERE wa.salary > 10000 AND h.name = "Private" AND NOT exists {(p)-[:GRADUATED_WITH]->(e:Education) WHERE e.education_level ENDS WITH "Degree"}
-RETURN count(p) as count_person;
+RETURN count(p) AS count_person;
+
+//
