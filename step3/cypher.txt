@@ -13,7 +13,7 @@ CREATE CONSTRAINT stationConstraint IF NOT EXISTS FOR (x:Station) REQUIRE x.name
 //LOAD CSV WITH HEADERS FROM 'file:///mrt_singapore.csv' AS row WITH row 
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/mrt_singapore.csv' AS row WITH row 
 MERGE (s1:Station {name: row.S1})
-SET s1.point = point({x:toFloat(row.Lat), y:toFloat(row.Long), srid: 4326})
+SET s1.point = point({latitude:toFloat(row.Lat), longitude:toFloat(row.Long), srid: 4326})
 SET s1.lines = row.Lines
 MERGE (s2:Station {name:row.S2})
 with s1, s2, row
@@ -26,14 +26,14 @@ REMOVE rel.noOp;
 MATCH (near:Station)
 WITH near, near.point AS start, point({latitude: 1.285652998284201, longitude: 103.84796600533471}) AS neo4j
 WITH near, point.distance(start, neo4j) AS distance
-RETURN near, distance ORDER BY distance ASC LIMIT 1
+RETURN near, distance ORDER BY distance ASC LIMIT 1;
 
-// Shrotest path by stations !
+// Shortest path by stations !
 MATCH (near:Station)
 WITH near, near.point AS start, point({latitude: 1.285652998284201, longitude: 103.84796600533471}) AS neo4j
 WITH near, point.distance(start, neo4j) AS distance ORDER BY distance ASC LIMIT 1
 MATCH path = allShortestPaths( (near)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(:Station {name: 'YISHUN'}) )
-RETURN path
+RETURN path;
 
 // Then let's load some journeys
 
@@ -56,8 +56,36 @@ MERGE (t)-[:ENDED]->(sOut);
 
 // QUERIES
 
-// Let's find the more used MRT station during the week
+// Let's find the most used MRT station
+match (s:Station)-[:ENDED|STARTED]-(t:Travel) with s.name as name, count(t) as nbT return name, nbT order by nbT limit 1;
 
-// Let's find the longest distance made by a user
+// Let's find the most used MRT station durign the week
+match (s:Station)-[:ENDED|STARTED]-(t:Travel) where t.Date <= date('2022-11-12') with s.name as name, count(t) as nbT return name, nbT order by nbT limit 1;
 
 // 
+match (s1:Station)-[t:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE]->(s2:Station) set t.dist = point.distance(s1.point, s2.point);
+
+match (s1:Station {name: 'ORCHARD'})
+match (s2:Station {name: 'YISHUN'})
+match p = shortestPath((s1)-[:NS*]-(s2))
+return s1.name, s2.name, reduce(s=0, i in relationships(p) | s+i.dist) as distance;
+
+match (s1:Station {name: 'ORCHARD'})
+match (s2:Station {name: 'YISHUN'})
+match p = shortestPath((s1)-[:NS*]-(s2))
+return p;
+
+match (s1:Station {name: 'ORCHARD'})
+match (s2:Station {name: 'YISHUN'})
+match p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
+return s1.name, s2.name, reduce(s=0, i in relationships(p) | s+i.dist) as distance;
+
+match (s1:Station {name: 'ORCHARD'})
+match (s2:Station {name: 'YISHUN'})
+match p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
+return p;
+
+match (s1)-[:STARTED]-(t:Travel)-[:ENDED]-(s2) where s1.name <> s2.name
+match p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
+with t, s1, s2, reduce(s=0, i in relationships(p) | s+i.dist) as distance
+return t.xID, s1.name, s2.name, distance order by distance desc;
