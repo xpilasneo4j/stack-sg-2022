@@ -23,10 +23,3 @@ MATCH (c:CreditCard {credit_card_no: row.credit_card_no})
 MATCH (p:Person {id: toInteger(row.person_id)})
 MERGE (c)-[:BELONGS_TO]->(p);
 //
-
-// Queries
-
-// 1. 
-
-
-// 2. 

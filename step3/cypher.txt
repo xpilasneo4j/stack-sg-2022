@@ -3,7 +3,7 @@
 // https://neo4j.com/cloud/platform/aura-graph-database/
 
 ////////////////////////////////////////////////////////
-
+//
 // Second dataset - Transportation data
 //
 // The first part of this dataset is the Singapore MRT Map
@@ -11,10 +11,8 @@
 // which happened during seven days. Each journey has a unique ID
 // We have the EZ Link card ID of each travel
 // We have the date and time of entry in the MRT.
-
+//
 ////////////////////////////////////////////////////////
-
-// Cypher code to load the data and to perform some queries
 
 // First let's create a unique constraint for each station based on the name
 CREATE CONSTRAINT stationConstraint IF NOT EXISTS FOR (x:Station) REQUIRE x.name IS UNIQUE;
@@ -103,6 +101,7 @@ MATCH (s2:Station {name: 'YISHUN'})
 MATCH p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
 RETURN p;
 
+// 7. What is the longest travel made during the week?
 MATCH (s1)-[:STARTED]-(t:Travel)-[:ENDED]-(s2) WHERE s1.name <> s2.name
 MATCH p = shortestPath((s1)-[:CC|EW|NS|NE|SW|BP|PE|PW|SE|DT|CG|TE|CE*]-(s2))
 WITH t, s1, s2, reduce(s=0, i in relationships(p) | s+i.dist) AS distance
