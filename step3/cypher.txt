@@ -53,7 +53,7 @@ CREATE CONSTRAINT travelConstraint IF NOT EXISTS FOR (x:Travel) REQUIRE x.xID IS
 CREATE CONSTRAINT transportCardConstraint IF NOT EXISTS FOR (x:TransportCard) REQUIRE x.Card_ID IS UNIQUE;
 //
 
-// TO BE REMOVED ONCE TESTING IS OK
+//
 LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/xpilasneo4j/stack-sg-2022/main/data/transports.csv' AS row WITH row 
 MERGE (sIn:Station {name: row.Station_In})
 MERGE (sOut:Station {name: row.Station_Out})
